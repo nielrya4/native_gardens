@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rewild Idaho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
+    <link href="https://unpkg.com/tabulator-tables@6.3.1//dist/css/tabulator_semanticui.min.css" rel="stylesheet">
+    <style>
+        body {background-color: darkslategray; color: white;}
+        p a {color: white !important;}
+        .tab {overflow: hidden; border: 1px solid #ccc; background-color: #f1f1f1;}
+        .tab button {background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; font-size: 17px;}
+        .tab button:hover {background-color: #ddd;}
+        .tab button.active {background-color: #ccc;}
+        .tabcontent {display: none; padding: 20px; border: 1px solid #ccc; border-top: none; background-color: #30a5a5; width: 100%;}
+        .tabulator {width: 100%;}
+        .tabulator-row-odd {background-color: #8dabb8 !important;}
+        .tabulator-row-even {background-color: #87dca8 !important;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br />
+        <h3>Rewild Idaho - Plant a Native Garden Today!</h3>
+        <h6>Good for native pollinators, biodiversity, and for you</h6>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'General')" id="defaultOpen">General Information</button>
+            <button class="tablinks" onclick="openTab(event, 'Plants')">Native Plant Lists</button>
+            <button class="tablinks" onclick="openTab(event, 'Map')">Idaho Climate Map</button>
+        </div>
+
+        <div id="General" class="tabcontent">
+            <h3>Why Rewild?</h3>
+            <p>
+                Rewilding a part of your yard will benefit you and native pollinators, as well as increase
+                native biodiversity around you. This can look like more butterflies and hummingbirds,
+                adding new herbs and berries to your diet, brightening up your property, having a low-maintenance
+                garden that looks great, and learning about what grows natively in our State.
+            </p>
+            <br />
+            <h4>How To Use This Site</h4>
+            <h6>Native Plant Lists</h6>
+            <p>
+                This tab contains information about what plants grow locally, the conditions they prefer,
+                and how to take care of them. It also describes some of their many uses! NOTE that all
+                edible/medicinal information here should be double and triple checked. Before ingesting
+                any part of any plant, the identification must be certain. Make sure you're not allergic
+                to any relatives of a plant you plan to eat. Do your research, be safe, and have fun!
+                These tables also contain links that point to where the plants can be purchased. If they are
+                out of stock, simply google another place they can be purchased. Some of the best seed providers
+                for native Idaho plants are
+                <a href="https://snakeriverseeds.com/" target="_blank">Snake River Seed Cooperative</a>
+                and <a href="https://klamathsiskiyouseeds.com/" target="_blank">Klamath-Siskiyou Native Seeds</a>.
+            </p>
+            <h6>Climate Map of Idaho</h6>
+            <p>
+                This tab has an interactive map that shows what the coldest winter temperatures are across Idaho.
+                Use this in conjunction with the cold hardiness temperatures listed on the plants page to decide what
+                is suitable to grow in your area. For example, Longleaf Groundcherry will grow great in the red and
+                orange areas, but not so well in the cyan and blue areas. Put your address in the search bar to
+                easily find what kind of climate your yard is in.
+            </p>
+            <br />
+            <h4>Our Yards: America's "New National Park"</h4>
+            <p>
+                If we replaced half of the lawns in the United States with native plant landscaping, we would have
+                created a 20,000,000 acre "National Park" without having to pass any legislation. For scale,
+                Yellowstone is 1/10th of that size, ~2,200,000 acres. You may not want to replace your whole lawn
+                with native plants, and that is ok! Adding any amount of native plants will benefit your property
+                and contribute to the "New National Park." If you're interested in this concept, make sure to check
+                out the work being done over at
+                <a target="_blank" href="https://homegrownnationalpark.org/about-us/">Homegrown National Park</a>!
+            </p>
+            <h5>Key Terms</h5>
+            <dl>
+                <dt>Rewild</dt>
+                <dd>To restore (an area of land) to its natural, wild state</dd>
+                <dt>Native Garden</dt>
+                <dd>A landscape that uses plants that are native to the local region</dd>
+                <dt>Ecoculture</dt>
+                <dd>The management of natural ecosystems to enhance their production of useful products</dd>
+                <dt>Biodiversity</dt>
+                <dd>The variety of life in the world or in a particular habitat or ecosystem</dd>
+            </dl>
+            <p></p>
+        </div>
+        <br />
+        <div id="Plants" class="tabcontent">
+            <div class="table-container">
+                
+    <div id="example-table-Wildflowers_and_Forbs"></div>
+    <script>
+    var table = new Tabulator("#example-table-Wildflowers_and_Forbs", {
+        height: "500px",
+        layout: "fitData",
+        columns: [{'title': 'Name', 'field': 'Name'}, {'title': 'Latin Name', 'field': 'Latin Name'}, {'title': 'Light', 'field': 'Light'}, {'title': 'Water', 'field': 'Water'}, {'title': 'Soil', 'field': 'Soil'}, {'title': 'Hardiness', 'field': 'Hardiness'}, {'title': 'Pollinator Plant?', 'field': 'Pollinator Plant?'}, {'title': 'Uses', 'field': 'Uses'}, {'title': 'Purchase', 'field': 'Purchase', 'formatter': 'link', 'formatterParams': {'urlField': 'Purchase', 'labelField': 'Purchase', 'target': '_blank'}}],
+        data: [{'Name': 'Camas', 'Latin Name': 'Camassia quamash', 'Light': 'Full sun to partial shade', 'Water': 'Keep soil moist in spring and summer', 'Soil': 'Any', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Edible bulb', 'Purchase': 'https://territorialseed.com/products/camas'}, {'Name': 'Yarrow', 'Latin Name': 'Achillea millefolium', 'Light': 'Full sun to full shade', 'Water': 'Periodically in spring and summer', 'Soil': 'Any', 'Hardiness': '-50 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Tea, medicinal', 'Purchase': 'https://www.rareseeds.com/yarrow-common'}, {'Name': 'Nettle-Leaf Giant Hyssop', 'Latin Name': 'Agastache urticifolia', 'Light': 'Partial to full shade', 'Water': 'Periodically in spring and summer', 'Soil': 'Acidic', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Tea, as a potherb', 'Purchase': 'https://store.underwoodgardens.com/nettleleaf-hyssop-seeds-agastache-urticifolia/f1211/'}, {'Name': 'Canada Mint', 'Latin Name': 'Mentha canadensis', 'Light': 'Partial to full shade', 'Water': 'Daily in spring and summer', 'Soil': 'Acidic', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Tea', 'Purchase': 'https://akene.ca/en/products/semences-menthe-du-canada'}, {'Name': 'Mountain Coyote Mint', 'Latin Name': 'Monardella odoratissima', 'Light': 'Full sun to full shade', 'Water': 'Periodically in spring and summer', 'Soil': 'Acidic', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Culinary herb (like oregano)', 'Purchase': 'https://klamathsiskiyouseeds.com/product/monardella-odoratissima-coyote-mint/'}, {'Name': 'Wild Bergamot', 'Latin Name': 'Monarda fistulosa', 'Light': 'Full sun to full shade', 'Water': 'Periodically in spring and summer', 'Soil': 'Acidic', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Culinary herb (like oregano)', 'Purchase': 'https://www.prairiemoon.com/monarda-fistulosa-wild-bergamot'}, {'Name': 'Silver Sage', 'Latin Name': 'Artemisia ludoviciana', 'Light': 'Full sun', 'Water': 'Periodically in spring and summer', 'Soil': 'Alkaline', 'Hardiness': '-30 F', 'Pollinator Plant?': 'No, wind-pollinated', 'Uses': 'Tea, culinary herb, ', 'Purchase': 'https://www.prairiemoon.com/artemisia-ludoviciana-prairie-sage'}, {'Name': 'Wild Tarragon', 'Latin Name': 'Artemisia dracunculus', 'Light': 'Full sun', 'Water': 'Periodically in spring and summer', 'Soil': 'Alkaline', 'Hardiness': '-20 F', 'Pollinator Plant?': 'No, wind-pollinated', 'Uses': 'Culinary herb', 'Purchase': 'https://sheffields.com/seeds/Artemisia/dracunculus'}, {'Name': 'Arrow-Leaf Balsamroot', 'Latin Name': 'Balsamorhiza sagittata', 'Light': 'Full sun', 'Water': 'Rarely', 'Soil': 'Alkaline', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Medicinal', 'Purchase': 'https://www.everwilde.com/store/Balsamorhiza-sagittata-WildFlower-Seed.html'}, {'Name': 'Wild Sunflower', 'Latin Name': 'Helianthus annuus', 'Light': 'Full sun', 'Water': 'Rarely', 'Soil': 'Alkaline', 'Hardiness': '-50 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Unopened lower buds as a vegetable', 'Purchase': 'https://www.everwilde.com/store/Helianthus-annuus-WildFlower-Seed.html'}, {'Name': 'Wasatch Penstemon', 'Latin Name': 'Penstemon cyananthus', 'Light': 'Full sun', 'Water': 'Periodically in spring and summer', 'Soil': 'Alkaline', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Unknown', 'Purchase': 'https://www.hazzardsgreenhouse.com/Merchant2/merchant.mvc?Store_Code=Hazwho&Screen=PROD&Product_Code=P7691'}, {'Name': 'Desert Paintbrush', 'Latin Name': 'Castilleja angustifolia', 'Light': 'Full sun to partial shade', 'Water': 'Rarely', 'Soil': 'Alkaline', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Edible flowers', 'Purchase': 'https://westernnativeseed.com/wildflowers_A_C.html#casang'}, {'Name': 'Gairdner’s Yampah', 'Latin Name': 'Perideridia gairdneri', 'Light': 'Full sun to partial shade', 'Water': 'Periodically in summer', 'Soil': 'Alkaline', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Seeds as a spice (like cumin), root as a vegetable', 'Purchase': 'https://www.butterfieldseeds.com/seeds/p/yampah'}, {'Name': 'Widewing Springparsley', 'Latin Name': 'Vesper purpurascens', 'Light': 'Full sun to partial shade', 'Water': 'Periodically in spring', 'Soil': 'Alkaline', 'Hardiness': '-10 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves as an herb (like parsley), root as a vegetable', 'Purchase': '???'}, {'Name': 'Fernleaf Biscuitroot', 'Latin Name': 'Lomatium dissectum', 'Light': 'Full sun to full shade', 'Water': 'Periodically in spring and summer', 'Soil': 'Any', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves as an herb (like parsley), root is very medicinal', 'Purchase': 'https://nativefoodsnursery.com/biscuitroot/'}, {'Name': 'Slender Nettle', 'Latin Name': 'Urtica gracilis', 'Light': 'Full sun to full shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Any', 'Hardiness': '-40 F', 'Pollinator Plant?': 'No, wind-pollinated', 'Uses': 'Leaves cooked as a green, or dried as a tea', 'Purchase': 'https://www.toadshade.com/Urtica-dioica.html'}, {'Name': 'Tapertip Onion', 'Latin Name': 'Allium acuminatum', 'Light': 'Full sun to partial shade', 'Water': 'Periodically in spring', 'Soil': 'Any', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves, flowers, and bulb all edible. Use like garlic', 'Purchase': 'http://klamathsiskiyouseeds.com/product/allium-acuminatum-tapertip-onion/'}, {'Name': 'Sego Lily', 'Latin Name': 'Calochortus nuttallii', 'Light': 'Full sun', 'Water': 'Periodically in spring and summer', 'Soil': 'Alkaline', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves, flowers, and bulb all edible', 'Purchase': '???'}, {'Name': 'Sagebrush Mariposa Lily', 'Latin Name': 'Calochortus macrocarpus', 'Light': 'Full sun', 'Water': 'Periodically in spring and summer', 'Soil': 'Alkaline', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves, flowers, and bulb all edible', 'Purchase': '???'}, {'Name': 'Glacier Lily', 'Latin Name': 'Erythronium grandiflorum', 'Light': 'Partial to full shade', 'Water': 'Keep soil moist in spring and summer', 'Soil': 'Acidic', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Bulbs cooked as a vegetable. Do not consume raw', 'Purchase': 'https://klamathsiskiyouseeds.com/product/erythronium-grandiflorum-glacier-lily/?gQT=1'}, {'Name': 'Yellow Bell', 'Latin Name': 'Fritillaria pudica', 'Light': 'Full sun', 'Water': 'Periodically in spring', 'Soil': 'Alkaline', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves, flowers, and bulb all edible', 'Purchase': 'https://farreachesfarm.com/products/fritillaria-pudica'}, {'Name': 'Checker Lily', 'Latin Name': 'Fritillaria affinis', 'Light': 'Full sun', 'Water': 'Periodically in spring', 'Soil': 'Alkaline', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves, flowers, and bulb all edible', 'Purchase': 'https://northwestmeadowscapes.com/products/checker-lily-seeds-fritillaria-affinis'}, {'Name': 'Spotted Fritillary', 'Latin Name': 'Fritillaria atropurpurea', 'Light': 'Full sun', 'Water': 'Periodically in spring', 'Soil': 'Alkaline', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves, flowers, and bulb all edible', 'Purchase': '???'}, {'Name': 'Sagebrush Bluebells', 'Latin Name': 'Mertensia oblongifolia', 'Light': 'Partial shade', 'Water': 'Periodically in spring', 'Soil': 'Alkaline', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves and flowers edible in early spring', 'Purchase': 'http://www.alplains.com/Catalog8.html'}, {'Name': 'Longleaf Groundcherry', 'Latin Name': 'Physalis longifolia ', 'Light': 'Full sun', 'Water': 'Periodically throughout growing season', 'Soil': 'Alkaline', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Berries edible when ripe in late fall', 'Purchase': 'https://www.smallislandseedco.com/product-page/longleaf-groundcherry-physalis-longifolia-var-sugglabrata-perennial-sweet'}, {'Name': 'Western Sweet Cicely', 'Latin Name': 'Osmorhiza occidentalis', 'Light': 'Full shade', 'Water': 'Often in spring and summer', 'Soil': 'Acidic', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves and roots as an herb, spice, or tea', 'Purchase': 'https://strictlymedicinalseeds.com/product/sweetroot-western-osmorhiza-occidentalis-packet-of-seeds/'}, {'Name': 'Mountain Bluebells', 'Latin Name': 'Mertensia ciliata', 'Light': 'Full sun to partial shade', 'Water': 'Periodically in spring and summer', 'Soil': 'Acidic', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Leaves and flowers edible in early spring', 'Purchase': 'https://www.butterfieldseeds.com/seeds/p/tall-mountain-bluebells'}, {'Name': 'Fireweed', 'Latin Name': 'Chamaenerion angustifolium', 'Light': 'Partial to full shade', 'Water': 'Periodically in spring and summer', 'Soil': 'Acidic', 'Hardiness': '-50 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Best wild tea. Crush leaves, ferment for 3 days, then dry', 'Purchase': 'https://snakeriverseeds.com/products/fireweed'}, {'Name': 'Creeping Oregon Grape', 'Latin Name': 'Berberis repens', 'Light': 'Partial to full shade', 'Water': 'Periodically in spring and summer', 'Soil': 'Any', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Sour berries in summer and fall, root is strong antiviral', 'Purchase': 'https://klamathsiskiyouseeds.com/product/berberis-aquifolium-var-repens-creeping-oregon-grape/'}, {'Name': 'Bitterroot ', 'Latin Name': 'Lewisia rediviva', 'Light': 'Full sun', 'Water': 'Periodically in spring and summer', 'Soil': 'Alkaline', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Root in spring', 'Purchase': 'https://northwestmeadowscapes.com/products/bitterroot-seeds-lewisia-rediviva-1'}, {'Name': 'Canby’s Lomatium', 'Latin Name': 'Lomatium canbyi', 'Light': 'Full sun', 'Water': 'Periodically in spring', 'Soil': 'Alkaline', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Edible root in late winter and early spring', 'Purchase': '???'}, {'Name': 'Plains Prickly Pear', 'Latin Name': 'Opuntia polyacantha', 'Light': 'Full sun', 'Water': 'Rarely', 'Soil': 'Alkaline', 'Hardiness': '-25 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Edible pads, flowers, and fruit. Just remove spines', 'Purchase': 'https://ferriseeds.com/products/opuntia-imbricata-br-cholla-cactus-copy'}],
+        autoResize: true,
+    });
+    </script>
+    
+            </div>
+            <div class="table-container">
+                
+    <div id="example-table-Shrubs"></div>
+    <script>
+    var table = new Tabulator("#example-table-Shrubs", {
+        height: "500px",
+        layout: "fitData",
+        columns: [{'title': 'Name', 'field': 'Name'}, {'title': 'Latin Name', 'field': 'Latin Name'}, {'title': 'Light', 'field': 'Light'}, {'title': 'Water', 'field': 'Water'}, {'title': 'Soil', 'field': 'Soil'}, {'title': 'Hardiness', 'field': 'Hardiness'}, {'title': 'Pollinator Plant?', 'field': 'Pollinator Plant?'}, {'title': 'Uses', 'field': 'Uses'}, {'title': 'Purchase', 'field': 'Purchase', 'formatter': 'link', 'formatterParams': {'urlField': 'Purchase', 'labelField': 'Purchase', 'target': '_blank'}}],
+        data: [{'Name': 'Blue Elderberry', 'Latin Name': 'Sambucus cerulea', 'Light': 'Full sun to partial shade', 'Water': 'Keep soil moist throughout growing season', 'Soil': 'Any', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Cooked berries in deserts, flowers for tea', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Saskatoon Serviceberry', 'Latin Name': 'Amelanchier alnifolia', 'Light': 'Partial to full shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Acidic', 'Hardiness': '-60 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Berries fresh, dried, cooked, or canned', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Utah Serviceberry', 'Latin Name': 'Amelanchier utahensis', 'Light': 'Full sun to partial shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Alkaline', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Berries fresh, dried, cooked, or canned', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Golden Currant', 'Latin Name': 'Ribes aureum', 'Light': 'Full sun', 'Water': 'Periodically throughout growing season', 'Soil': 'Alkaline', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Berries fresh, dried, cooked, or canned', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Big Sagebrush', 'Latin Name': 'Artemisia tridentata', 'Light': 'Full sun', 'Water': 'Rarely', 'Soil': 'Alkaline', 'Hardiness': '-30 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Leaves to brush off prickly pear glochids', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Three-Tip Sagebrush', 'Latin Name': 'Artemisia tripartita', 'Light': 'Full sun', 'Water': 'Periodically throughout growing season', 'Soil': 'Alkaline', 'Hardiness': '-20 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Leaves to brush off prickly pear glochids', 'Purchase': '???'}, {'Name': 'Rocky Mountain Juniper', 'Latin Name': 'Juniperus scopulorum', 'Light': 'Full sun to partial shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Alkaline', 'Hardiness': '-40 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Berries as a spice, or to start a ferment. Leaf ash for nixtamalizing corn', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Utah Juniper', 'Latin Name': 'Juniperus osteosperma', 'Light': 'Full sun', 'Water': 'Rarely', 'Soil': 'Alkaline', 'Hardiness': '-20 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Berries as a spice, or to start a ferment. Leaf ash for nixtamalizing corn', 'Purchase': 'https://sheffields.com/seeds/Juniperus/osteosperma'}, {'Name': 'Common Juniper', 'Latin Name': 'Juniperus communis kelleyi', 'Light': 'Partial to full shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Acidic', 'Hardiness': '-50 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Berries as a spice, or to start a ferment', 'Purchase': 'https://sheffields.com/seeds/Juniperus/communis'}, {'Name': 'Sumac', 'Latin Name': 'Rhus trilobata', 'Light': 'Full sun', 'Water': 'Rarely', 'Soil': 'Alkaline', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Berries dried and red part ground as a sour, lemony spice', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Red Osier Dogwood', 'Latin Name': 'Cornus sericea', 'Light': 'Partial to full shade', 'Water': 'Keep soil moist throughout growing season', 'Soil': 'Acidic', 'Hardiness': '-50 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Berries are gross but edible', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Black Hawthorn', 'Latin Name': 'Crataegus douglasii', 'Light': 'Full sun to partial shade', 'Water': 'Keep soil moist throughout growing season', 'Soil': 'Alkaline', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Berries in fruit leather or homemade ketchup. Wood is excellent firewood', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Woods Rose', 'Latin Name': 'Rosa woodsii', 'Light': 'Full sun to partial shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Any', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Berries or flowers as tea', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Nootka Rose', 'Latin Name': 'Rosa nutkana', 'Light': 'Full sun to partial shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Any', 'Hardiness': '-15 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Berries or flowers as tea', 'Purchase': 'https://onegreenworld.com/product/nootka-rose/'}],
+        autoResize: true,
+    });
+    </script>
+    
+            </div>
+            <div class="table-container">
+                
+    <div id="example-table-Trees"></div>
+    <script>
+    var table = new Tabulator("#example-table-Trees", {
+        height: "500px",
+        layout: "fitData",
+        columns: [{'title': 'Name', 'field': 'Name'}, {'title': 'Latin Name', 'field': 'Latin Name'}, {'title': 'Light', 'field': 'Light'}, {'title': 'Water', 'field': 'Water'}, {'title': 'Soil', 'field': 'Soil'}, {'title': 'Hardiness', 'field': 'Hardiness'}, {'title': 'Pollinator Plant?', 'field': 'Pollinator Plant?'}, {'title': 'Uses', 'field': 'Uses'}, {'title': 'Purchase', 'field': 'Purchase', 'formatter': 'link', 'formatterParams': {'urlField': 'Purchase', 'labelField': 'Purchase', 'target': '_blank'}}],
+        data: [{'Name': 'Western Chokecherry', 'Latin Name': 'Prunus virginiana demissa', 'Light': 'Full sun to partial shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Any', 'Hardiness': '-50 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Fruit in summer and fall', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'American Plum', 'Latin Name': 'Prunus americana', 'Light': 'Full sun to full shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Any', 'Hardiness': '-40 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Fruit in summer and fall', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Ponderosa Pine', 'Latin Name': 'Pinus ponderosa', 'Light': 'Full sun to partial shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Any', 'Hardiness': '-40 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Needles for fermented soda, pitch for glue', 'Purchase': 'http://www.alpha-nursery.com/ponderosa-pine.html'}, {'Name': 'Douglas Fir', 'Latin Name': 'Pseudotsuga menziesii', 'Light': 'Full sun to partial shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Any', 'Hardiness': '-30 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Needles for fermented soda, pitch for glue', 'Purchase': 'http://www.westwoodgrowers.com/products.html'}, {'Name': 'Subalpine Fir', 'Latin Name': 'Abies lasiocarpa', 'Light': 'Full sun to full shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Acidic', 'Hardiness': '-30 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Needles as spice or for fermented soda', 'Purchase': 'https://www.bonnersferrynursery.com/abies-fir'}, {'Name': 'Grand Fir', 'Latin Name': 'Abies grandis', 'Light': 'Full sun to full shade', 'Water': 'Keep soil moist throughout growing season', 'Soil': 'Acidic', 'Hardiness': '-20 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Needles as spice or for fermented soda', 'Purchase': 'http://www.westwoodgrowers.com/products.html'}, {'Name': 'Pinyon Pine', 'Latin Name': 'Pinus monophylla', 'Light': 'Full sun', 'Water': 'Rarely', 'Soil': 'Alkaline', 'Hardiness': '-20 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Seeds in fall, needles for fermented soda', 'Purchase': 'https://plants.franzwitte.com/12150021/Plant/14105/Singleleaf_Pinyon_Pine/'}, {'Name': 'Whitebark Pine', 'Latin Name': 'Pinus albicaulis', 'Light': 'Full sun', 'Water': 'Periodically throughout growing season', 'Soil': 'Alkaline', 'Hardiness': '-50 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Seeds in fall, needles for fermented soda', 'Purchase': 'https://sequoiatrees.com/products/whitebark-pine-medium-tree-seedling'}, {'Name': 'Netleaf Hackberry', 'Latin Name': 'Celtis reticulata', 'Light': 'Full sun', 'Water': 'Periodically throughout growing season', 'Soil': 'Alkaline', 'Hardiness': '-20 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Berries in late fall and winter', 'Purchase': 'https://www.laspilitas.com/nature-of-california/plants/187--celtis-reticulata'}, {'Name': 'Mountain Mahogany', 'Latin Name': 'Cercocarpus ledifolius', 'Light': 'Full sun', 'Water': 'Rarely', 'Soil': 'Alkaline', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Red/orange leaves as tea', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Quaking Aspen', 'Latin Name': 'Populus tremuloides', 'Light': 'Full sun to partial shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Acidic', 'Hardiness': '-50 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Bark for starting ferments', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Wasatch Maple', 'Latin Name': 'Acer grandidentatum', 'Light': 'Full sun to full shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Acidic', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Sap for syrup', 'Purchase': 'https://nativegardeners.com/products/bigtooth-maple'}, {'Name': 'Rocky Mountain Maple', 'Latin Name': 'Acer glabrum', 'Light': 'Full sun to full shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Acidic', 'Hardiness': '-30 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Sap for syrup', 'Purchase': 'https://cornellfarms.com/products/acer-glabrum-3gal-rocky-mountain-maple'}, {'Name': 'Water Birch', 'Latin Name': 'Betula occidentalis', 'Light': 'Full sun to full shade', 'Water': 'Keep soil moist throughout growing season', 'Soil': 'Acidic', 'Hardiness': '-50 F', 'Pollinator Plant?': 'No, wind pollinated', 'Uses': 'Bark in tea', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}, {'Name': 'Boxelder', 'Latin Name': 'Acer negundo', 'Light': 'Full sun to partial shade', 'Water': 'Periodically throughout growing season', 'Soil': 'Any', 'Hardiness': '-50 F', 'Pollinator Plant?': 'Yes', 'Uses': 'Sap for syrup', 'Purchase': 'https://www.northforknativeplants.com/large-containerized-native-plants'}],
+        autoResize: true,
+    });
+    </script>
+    
+            </div>
+            <br />
+            
+            
+<style>
+.container .slideshow {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mySlides {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.mySlides img {
+  max-height: 450px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+.prev:hover, .next:hover { background-color: rgba(0, 0, 0, 0.8); }
+
+.numbertext {
+  position: absolute;
+  top: 0;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.caption-container {
+  width: 100%;
+  text-align: center;
+  background-color: #222;
+  padding: 5px 10px;
+  color: white;
+  font-size: 18px; /* Larger text for better readability */
+  height: 38px; /* Ensures black box is always visible */
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Hide the thumbnails */
+.row {
+  display: none;
+}
+
+</style>
+
+<div class="container slideshow">
+  
+  <div class="mySlides">
+    <div class="numbertext">1 / 42</div>
+    <img src="img/yarrow.jpeg" style="height:650px;" alt="Yarrow (Achillea millefolium)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">2 / 42</div>
+    <img src="img/wild_onion.jpeg" style="height:650px;" alt="Wild Onion (Allium acuminatum)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">3 / 42</div>
+    <img src="img/wild_onion2.jpeg" style="height:650px;" alt="Wild Onion (Allium acuminatum)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">4 / 42</div>
+    <img src="img/saskatoon.jpeg" style="height:650px;" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">5 / 42</div>
+    <img src="img/saskatoon2.jpeg" style="height:650px;" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">6 / 42</div>
+    <img src="img/saskatoon3.jpeg" style="height:650px;" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">7 / 42</div>
+    <img src="img/utah_serviceberry.jpeg" style="height:650px;" alt="Utah Serviceberry (Amelanchier utahensis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">8 / 42</div>
+    <img src="img/agastache_urticifolia.jpg" style="height:650px;" alt="Nettle-Leaf Giant Hyssop (Agastache urticifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">9 / 42</div>
+    <img src="img/arrowleaf_balsamroot.jpeg" style="height:650px;" alt="Arrowleaf Balsamroot (Balsamorhiza sagittata)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">10 / 42</div>
+    <img src="img/big_sagebrush.jpeg" style="height:650px;" alt="Big Sagebrush (Artemisia tridentata)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">11 / 42</div>
+    <img src="img/big_sagebrush2.jpeg" style="height:650px;" alt="Big Sagebrush (Artemisia tridentata)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">12 / 42</div>
+    <img src="img/sagebrush_mariposa.jpeg" style="height:650px;" alt="Sagebrush Mariposa Lily (Calochortus macrocarpus)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">13 / 42</div>
+    <img src="img/desert_paintbrush.jpeg" style="height:650px;" alt="Desert Paintbrush (Castilleja chromosa)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">14 / 42</div>
+    <img src="img/j_communis_clayton.jpg" style="height:650px;" alt="Western Common Juniper (Juniperus communis kelleyi)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">15 / 42</div>
+    <img src="img/j_osteosperma_utah.jpg" style="height:650px;" alt="Utah Juniper (Juniperus osteosperma)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">16 / 42</div>
+    <img src="img/j_scopulorum_inman.jpg" style="height:650px;" alt="Rocky Mountain Juniper (Juniperus scopulorum)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">17 / 42</div>
+    <img src="img/lomatium_dissectum.jpg" style="height:650px;" alt="Fernleaf Biscuitroot (Lomatium dissectum)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">18 / 42</div>
+    <img src="img/barestem_biscuitroot.jpeg" style="height:650px;" alt="Barestem Biscuitroot (Lomatium nudicaule)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">19 / 42</div>
+    <img src="img/lupine.jpeg" style="height:650px;" alt="Lupine (Lupinus spp.)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">20 / 42</div>
+    <img src="img/mertensia_oblongifolia.jpg" style="height:650px;" alt="Sagebrush Bluebells (Mertensia oblongifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">21 / 42</div>
+    <img src="img/blazing_star.jpeg" style="height:650px;" alt="Giant Blazingstar (Mentzelia laevicaulis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">22 / 42</div>
+    <img src="img/canada_mint.jpeg" style="height:650px;" alt="Canada Mint (Mentha canadensis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">23 / 42</div>
+    <img src="img/canada_mint_2.jpeg" style="height:650px;" alt="Canada Mint (Mentha canadensis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">24 / 42</div>
+    <img src="img/osmorhiza_occidentalis.jpg" style="height:650px;" alt="Western Sweet Cicely (Osmorhiza occidentalis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">25 / 42</div>
+    <img src="img/sweet_cicely.jpeg" style="height:650px;" alt="Sweet Cicely (Osmorhiza occidentalis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">26 / 42</div>
+    <img src="img/longleaf_groundcherry.jpeg" style="height:650px;" alt="Longleaf Groundcherry (Physalis longifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">27 / 42</div>
+    <img src="img/longleaf_groundcherry2.jpeg" style="height:650px;" alt="Longleaf Groundcherry (Physalis longifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">28 / 42</div>
+    <img src="img/longleaf_groundcherry4.jpeg" style="height:650px;" alt="Longleaf Groundcherry (Physalis longifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">29 / 42</div>
+    <img src="img/wasatch_penstemon.jpeg" style="height:650px;" alt="Wasatch Penstemon (Penstemon cyananthus)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">30 / 42</div>
+    <img src="img/american_plum.jpeg" style="height:650px;" alt="American Plum (Prunus americana)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">31 / 42</div>
+    <img src="img/american_plum2.jpeg" style="height:650px;" alt="American Plum (Prunus americana)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">32 / 42</div>
+    <img src="img/chokecherry.jpeg" style="height:650px;" alt="Chokecherry (Prunus virginiana)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">33 / 42</div>
+    <img src="img/chockecherry2.jpeg" style="height:650px;" alt="Chokecherry (Prunus virginiana)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">34 / 42</div>
+    <img src="img/chokecherry3.jpeg" style="height:650px;" alt="Chokecherry (Prunus virginiana)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">35 / 42</div>
+    <img src="img/Prunus-virginiana-0.png" style="height:650px;" alt="Western Chokecherry (Prunus virginiana demissa)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">36 / 42</div>
+    <img src="img/sumac.jpeg" style="height:650px;" alt="Sumac (Rhus trilobata)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">37 / 42</div>
+    <img src="img/western_coneflower.jpeg" style="height:650px;" alt="Western Coneflower (Rudbeckia occidentalis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">38 / 42</div>
+    <img src="img/sunflower.jpeg" style="height:650px;" alt="Sunflower (Helianthus annuus)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">39 / 42</div>
+    <img src="img/urtica_gracilis.jpg" style="height:650px;" alt="Slender Nettle (Urtica gracilis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">40 / 42</div>
+    <img src="img/vesper_purpurascens.jpg" style="height:650px;" alt="Widewing Springparsley (Vesper purpurascens)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">41 / 42</div>
+    <img src="img/yellow_bell.jpeg" style="height:650px;" alt="Yellow Bell (Fritillaria pudica)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">42 / 42</div>
+    <img src="img/yellow_bell_2.jpeg" style="height:650px;" alt="Yellow Bell (Fritillaria pudica)">
+  </div>
+  
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  <div class="caption-container"><p id="caption"></p></div>
+  
+  <div class="row">
+    
+    <div class="column">
+      <img class="demo" src="img/yarrow.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Yarrow (Achillea millefolium)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/wild_onion.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Wild Onion (Allium acuminatum)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/wild_onion2.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Wild Onion (Allium acuminatum)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/saskatoon.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/saskatoon2.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/saskatoon3.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/utah_serviceberry.jpeg" style="width:100%" onclick="currentSlide(7)" alt="Utah Serviceberry (Amelanchier utahensis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/agastache_urticifolia.jpg" style="width:100%" onclick="currentSlide(8)" alt="Nettle-Leaf Giant Hyssop (Agastache urticifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/arrowleaf_balsamroot.jpeg" style="width:100%" onclick="currentSlide(9)" alt="Arrowleaf Balsamroot (Balsamorhiza sagittata)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/big_sagebrush.jpeg" style="width:100%" onclick="currentSlide(10)" alt="Big Sagebrush (Artemisia tridentata)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/big_sagebrush2.jpeg" style="width:100%" onclick="currentSlide(11)" alt="Big Sagebrush (Artemisia tridentata)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/sagebrush_mariposa.jpeg" style="width:100%" onclick="currentSlide(12)" alt="Sagebrush Mariposa Lily (Calochortus macrocarpus)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/desert_paintbrush.jpeg" style="width:100%" onclick="currentSlide(13)" alt="Desert Paintbrush (Castilleja chromosa)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/j_communis_clayton.jpg" style="width:100%" onclick="currentSlide(14)" alt="Western Common Juniper (Juniperus communis kelleyi)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/j_osteosperma_utah.jpg" style="width:100%" onclick="currentSlide(15)" alt="Utah Juniper (Juniperus osteosperma)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/j_scopulorum_inman.jpg" style="width:100%" onclick="currentSlide(16)" alt="Rocky Mountain Juniper (Juniperus scopulorum)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/lomatium_dissectum.jpg" style="width:100%" onclick="currentSlide(17)" alt="Fernleaf Biscuitroot (Lomatium dissectum)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/barestem_biscuitroot.jpeg" style="width:100%" onclick="currentSlide(18)" alt="Barestem Biscuitroot (Lomatium nudicaule)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/lupine.jpeg" style="width:100%" onclick="currentSlide(19)" alt="Lupine (Lupinus spp.)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/mertensia_oblongifolia.jpg" style="width:100%" onclick="currentSlide(20)" alt="Sagebrush Bluebells (Mertensia oblongifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/blazing_star.jpeg" style="width:100%" onclick="currentSlide(21)" alt="Giant Blazingstar (Mentzelia laevicaulis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/canada_mint.jpeg" style="width:100%" onclick="currentSlide(22)" alt="Canada Mint (Mentha canadensis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/canada_mint_2.jpeg" style="width:100%" onclick="currentSlide(23)" alt="Canada Mint (Mentha canadensis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/osmorhiza_occidentalis.jpg" style="width:100%" onclick="currentSlide(24)" alt="Western Sweet Cicely (Osmorhiza occidentalis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/sweet_cicely.jpeg" style="width:100%" onclick="currentSlide(25)" alt="Sweet Cicely (Osmorhiza occidentalis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/longleaf_groundcherry.jpeg" style="width:100%" onclick="currentSlide(26)" alt="Longleaf Groundcherry (Physalis longifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/longleaf_groundcherry2.jpeg" style="width:100%" onclick="currentSlide(27)" alt="Longleaf Groundcherry (Physalis longifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/longleaf_groundcherry4.jpeg" style="width:100%" onclick="currentSlide(28)" alt="Longleaf Groundcherry (Physalis longifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/wasatch_penstemon.jpeg" style="width:100%" onclick="currentSlide(29)" alt="Wasatch Penstemon (Penstemon cyananthus)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/american_plum.jpeg" style="width:100%" onclick="currentSlide(30)" alt="American Plum (Prunus americana)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/american_plum2.jpeg" style="width:100%" onclick="currentSlide(31)" alt="American Plum (Prunus americana)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/chokecherry.jpeg" style="width:100%" onclick="currentSlide(32)" alt="Chokecherry (Prunus virginiana)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/chockecherry2.jpeg" style="width:100%" onclick="currentSlide(33)" alt="Chokecherry (Prunus virginiana)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/chokecherry3.jpeg" style="width:100%" onclick="currentSlide(34)" alt="Chokecherry (Prunus virginiana)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/Prunus-virginiana-0.png" style="width:100%" onclick="currentSlide(35)" alt="Western Chokecherry (Prunus virginiana demissa)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/sumac.jpeg" style="width:100%" onclick="currentSlide(36)" alt="Sumac (Rhus trilobata)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/western_coneflower.jpeg" style="width:100%" onclick="currentSlide(37)" alt="Western Coneflower (Rudbeckia occidentalis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/sunflower.jpeg" style="width:100%" onclick="currentSlide(38)" alt="Sunflower (Helianthus annuus)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/urtica_gracilis.jpg" style="width:100%" onclick="currentSlide(39)" alt="Slender Nettle (Urtica gracilis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/vesper_purpurascens.jpg" style="width:100%" onclick="currentSlide(40)" alt="Widewing Springparsley (Vesper purpurascens)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/yellow_bell.jpeg" style="width:100%" onclick="currentSlide(41)" alt="Yellow Bell (Fritillaria pudica)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/yellow_bell_2.jpeg" style="width:100%" onclick="currentSlide(42)" alt="Yellow Bell (Fritillaria pudica)">
+    </div>
+    
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let captionText = document.getElementById("caption");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+
+  // Ensure caption updates correctly
+  let currentImg = slides[slideIndex - 1].querySelector("img");
+  captionText.innerHTML = currentImg.alt || "No caption available";
+}
+</script>
+
+
+            <br />
+            <br />
+            <br />
+        </div>
+
+        <div id="Map" class="tabcontent">
+            <iframe src="map/map.html" style="width: 100%; height: 700px;"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>

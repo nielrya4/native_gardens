@@ -1,0 +1,489 @@
+
+
+<style>
+.container .slideshow {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mySlides {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.mySlides img {
+  max-height: 450px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+.prev:hover, .next:hover { background-color: rgba(0, 0, 0, 0.8); }
+
+.numbertext {
+  position: absolute;
+  top: 0;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.caption-container {
+  width: 100%;
+  text-align: center;
+  background-color: #222;
+  padding: 5px 10px;
+  color: white;
+  font-size: 18px; /* Larger text for better readability */
+  height: 38px; /* Ensures black box is always visible */
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Hide the thumbnails */
+.row {
+  display: none;
+}
+
+</style>
+
+<div class="container slideshow">
+  
+  <div class="mySlides">
+    <div class="numbertext">1 / 42</div>
+    <img src="img/yarrow.jpeg" style="max-height:650px;" alt="Yarrow (Achillea millefolium)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">2 / 42</div>
+    <img src="img/wild_onion.jpeg" style="max-height:650px;" alt="Wild Onion (Allium acuminatum)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">3 / 42</div>
+    <img src="img/wild_onion2.jpeg" style="max-height:650px;" alt="Wild Onion (Allium acuminatum)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">4 / 42</div>
+    <img src="img/saskatoon.jpeg" style="max-height:650px;" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">5 / 42</div>
+    <img src="img/saskatoon2.jpeg" style="max-height:650px;" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">6 / 42</div>
+    <img src="img/saskatoon3.jpeg" style="max-height:650px;" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">7 / 42</div>
+    <img src="img/utah_serviceberry.jpeg" style="max-height:650px;" alt="Utah Serviceberry (Amelanchier utahensis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">8 / 42</div>
+    <img src="img/agastache_urticifolia.jpg" style="max-height:650px;" alt="Nettle-Leaf Giant Hyssop (Agastache urticifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">9 / 42</div>
+    <img src="img/arrowleaf_balsamroot.jpeg" style="max-height:650px;" alt="Arrowleaf Balsamroot (Balsamorhiza sagittata)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">10 / 42</div>
+    <img src="img/big_sagebrush.jpeg" style="max-height:650px;" alt="Big Sagebrush (Artemisia tridentata)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">11 / 42</div>
+    <img src="img/big_sagebrush2.jpeg" style="max-height:650px;" alt="Big Sagebrush (Artemisia tridentata)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">12 / 42</div>
+    <img src="img/sagebrush_mariposa.jpeg" style="max-height:650px;" alt="Sagebrush Mariposa Lily (Calochortus macrocarpus)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">13 / 42</div>
+    <img src="img/desert_paintbrush.jpeg" style="max-height:650px;" alt="Desert Paintbrush (Castilleja chromosa)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">14 / 42</div>
+    <img src="img/j_communis_clayton.jpg" style="max-height:650px;" alt="Western Common Juniper (Juniperus communis kelleyi)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">15 / 42</div>
+    <img src="img/j_osteosperma_utah.jpg" style="max-height:650px;" alt="Utah Juniper (Juniperus osteosperma)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">16 / 42</div>
+    <img src="img/j_scopulorum_inman.jpg" style="max-height:650px;" alt="Rocky Mountain Juniper (Juniperus scopulorum)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">17 / 42</div>
+    <img src="img/lomatium_dissectum.jpg" style="max-height:650px;" alt="Fernleaf Biscuitroot (Lomatium dissectum)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">18 / 42</div>
+    <img src="img/barestem_biscuitroot.jpeg" style="max-height:650px;" alt="Barestem Biscuitroot (Lomatium nudicaule)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">19 / 42</div>
+    <img src="img/lupine.jpeg" style="max-height:650px;" alt="Lupine (Lupinus spp.)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">20 / 42</div>
+    <img src="img/mertensia_oblongifolia.jpg" style="max-height:650px;" alt="Sagebrush Bluebells (Mertensia oblongifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">21 / 42</div>
+    <img src="img/blazing_star.jpeg" style="max-height:650px;" alt="Giant Blazingstar (Mentzelia laevicaulis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">22 / 42</div>
+    <img src="img/canada_mint.jpeg" style="max-height:650px;" alt="Canada Mint (Mentha canadensis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">23 / 42</div>
+    <img src="img/canada_mint_2.jpeg" style="max-height:650px;" alt="Canada Mint (Mentha canadensis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">24 / 42</div>
+    <img src="img/osmorhiza_occidentalis.jpg" style="max-height:650px;" alt="Western Sweet Cicely (Osmorhiza occidentalis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">25 / 42</div>
+    <img src="img/sweet_cicely.jpeg" style="max-height:650px;" alt="Sweet Cicely (Osmorhiza occidentalis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">26 / 42</div>
+    <img src="img/longleaf_groundcherry.jpeg" style="max-height:650px;" alt="Longleaf Groundcherry (Physalis longifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">27 / 42</div>
+    <img src="img/longleaf_groundcherry2.jpeg" style="max-height:650px;" alt="Longleaf Groundcherry (Physalis longifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">28 / 42</div>
+    <img src="img/longleaf_groundcherry4.jpeg" style="max-height:650px;" alt="Longleaf Groundcherry (Physalis longifolia)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">29 / 42</div>
+    <img src="img/wasatch_penstemon.jpeg" style="max-height:650px;" alt="Wasatch Penstemon (Penstemon cyananthus)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">30 / 42</div>
+    <img src="img/american_plum.jpeg" style="max-height:650px;" alt="American Plum (Prunus americana)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">31 / 42</div>
+    <img src="img/american_plum2.jpeg" style="max-height:650px;" alt="American Plum (Prunus americana)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">32 / 42</div>
+    <img src="img/chokecherry.jpeg" style="max-height:650px;" alt="Chokecherry (Prunus virginiana)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">33 / 42</div>
+    <img src="img/chockecherry2.jpeg" style="max-height:650px;" alt="Chokecherry (Prunus virginiana)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">34 / 42</div>
+    <img src="img/chokecherry3.jpeg" style="max-height:650px;" alt="Chokecherry (Prunus virginiana)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">35 / 42</div>
+    <img src="img/Prunus-virginiana-0.png" style="max-height:650px;" alt="Western Chokecherry (Prunus virginiana demissa)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">36 / 42</div>
+    <img src="img/sumac.jpeg" style="max-height:650px;" alt="Sumac (Rhus trilobata)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">37 / 42</div>
+    <img src="img/western_coneflower.jpeg" style="max-height:650px;" alt="Western Coneflower (Rudbeckia occidentalis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">38 / 42</div>
+    <img src="img/sunflower.jpeg" style="max-height:650px;" alt="Sunflower (Helianthus annuus)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">39 / 42</div>
+    <img src="img/urtica_gracilis.jpg" style="max-height:650px;" alt="Slender Nettle (Urtica gracilis)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">40 / 42</div>
+    <img src="img/vesper_purpurascens.jpg" style="max-height:650px;" alt="Widewing Springparsley (Vesper purpurascens)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">41 / 42</div>
+    <img src="img/yellow_bell.jpeg" style="max-height:650px;" alt="Yellow Bell (Fritillaria pudica)">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">42 / 42</div>
+    <img src="img/yellow_bell_2.jpeg" style="max-height:650px;" alt="Yellow Bell (Fritillaria pudica)">
+  </div>
+  
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  <div class="caption-container"><p id="caption"></p></div>
+  
+  <div class="row">
+    
+    <div class="column">
+      <img class="demo" src="img/yarrow.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Yarrow (Achillea millefolium)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/wild_onion.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Wild Onion (Allium acuminatum)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/wild_onion2.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Wild Onion (Allium acuminatum)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/saskatoon.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/saskatoon2.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/saskatoon3.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Saskatoon Serviceberry (Amelanchier alnifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/utah_serviceberry.jpeg" style="width:100%" onclick="currentSlide(7)" alt="Utah Serviceberry (Amelanchier utahensis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/agastache_urticifolia.jpg" style="width:100%" onclick="currentSlide(8)" alt="Nettle-Leaf Giant Hyssop (Agastache urticifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/arrowleaf_balsamroot.jpeg" style="width:100%" onclick="currentSlide(9)" alt="Arrowleaf Balsamroot (Balsamorhiza sagittata)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/big_sagebrush.jpeg" style="width:100%" onclick="currentSlide(10)" alt="Big Sagebrush (Artemisia tridentata)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/big_sagebrush2.jpeg" style="width:100%" onclick="currentSlide(11)" alt="Big Sagebrush (Artemisia tridentata)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/sagebrush_mariposa.jpeg" style="width:100%" onclick="currentSlide(12)" alt="Sagebrush Mariposa Lily (Calochortus macrocarpus)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/desert_paintbrush.jpeg" style="width:100%" onclick="currentSlide(13)" alt="Desert Paintbrush (Castilleja chromosa)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/j_communis_clayton.jpg" style="width:100%" onclick="currentSlide(14)" alt="Western Common Juniper (Juniperus communis kelleyi)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/j_osteosperma_utah.jpg" style="width:100%" onclick="currentSlide(15)" alt="Utah Juniper (Juniperus osteosperma)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/j_scopulorum_inman.jpg" style="width:100%" onclick="currentSlide(16)" alt="Rocky Mountain Juniper (Juniperus scopulorum)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/lomatium_dissectum.jpg" style="width:100%" onclick="currentSlide(17)" alt="Fernleaf Biscuitroot (Lomatium dissectum)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/barestem_biscuitroot.jpeg" style="width:100%" onclick="currentSlide(18)" alt="Barestem Biscuitroot (Lomatium nudicaule)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/lupine.jpeg" style="width:100%" onclick="currentSlide(19)" alt="Lupine (Lupinus spp.)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/mertensia_oblongifolia.jpg" style="width:100%" onclick="currentSlide(20)" alt="Sagebrush Bluebells (Mertensia oblongifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/blazing_star.jpeg" style="width:100%" onclick="currentSlide(21)" alt="Giant Blazingstar (Mentzelia laevicaulis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/canada_mint.jpeg" style="width:100%" onclick="currentSlide(22)" alt="Canada Mint (Mentha canadensis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/canada_mint_2.jpeg" style="width:100%" onclick="currentSlide(23)" alt="Canada Mint (Mentha canadensis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/osmorhiza_occidentalis.jpg" style="width:100%" onclick="currentSlide(24)" alt="Western Sweet Cicely (Osmorhiza occidentalis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/sweet_cicely.jpeg" style="width:100%" onclick="currentSlide(25)" alt="Sweet Cicely (Osmorhiza occidentalis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/longleaf_groundcherry.jpeg" style="width:100%" onclick="currentSlide(26)" alt="Longleaf Groundcherry (Physalis longifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/longleaf_groundcherry2.jpeg" style="width:100%" onclick="currentSlide(27)" alt="Longleaf Groundcherry (Physalis longifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/longleaf_groundcherry4.jpeg" style="width:100%" onclick="currentSlide(28)" alt="Longleaf Groundcherry (Physalis longifolia)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/wasatch_penstemon.jpeg" style="width:100%" onclick="currentSlide(29)" alt="Wasatch Penstemon (Penstemon cyananthus)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/american_plum.jpeg" style="width:100%" onclick="currentSlide(30)" alt="American Plum (Prunus americana)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/american_plum2.jpeg" style="width:100%" onclick="currentSlide(31)" alt="American Plum (Prunus americana)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/chokecherry.jpeg" style="width:100%" onclick="currentSlide(32)" alt="Chokecherry (Prunus virginiana)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/chockecherry2.jpeg" style="width:100%" onclick="currentSlide(33)" alt="Chokecherry (Prunus virginiana)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/chokecherry3.jpeg" style="width:100%" onclick="currentSlide(34)" alt="Chokecherry (Prunus virginiana)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/Prunus-virginiana-0.png" style="width:100%" onclick="currentSlide(35)" alt="Western Chokecherry (Prunus virginiana demissa)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/sumac.jpeg" style="width:100%" onclick="currentSlide(36)" alt="Sumac (Rhus trilobata)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/western_coneflower.jpeg" style="width:100%" onclick="currentSlide(37)" alt="Western Coneflower (Rudbeckia occidentalis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/sunflower.jpeg" style="width:100%" onclick="currentSlide(38)" alt="Sunflower (Helianthus annuus)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/urtica_gracilis.jpg" style="width:100%" onclick="currentSlide(39)" alt="Slender Nettle (Urtica gracilis)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/vesper_purpurascens.jpg" style="width:100%" onclick="currentSlide(40)" alt="Widewing Springparsley (Vesper purpurascens)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/yellow_bell.jpeg" style="width:100%" onclick="currentSlide(41)" alt="Yellow Bell (Fritillaria pudica)">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="img/yellow_bell_2.jpeg" style="width:100%" onclick="currentSlide(42)" alt="Yellow Bell (Fritillaria pudica)">
+    </div>
+    
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let captionText = document.getElementById("caption");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+
+  // Ensure caption updates correctly
+  let currentImg = slides[slideIndex - 1].querySelector("img");
+  captionText.innerHTML = currentImg.alt || "No caption available";
+}
+</script>

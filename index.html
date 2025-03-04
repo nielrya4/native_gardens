@@ -31,7 +31,7 @@
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'General')" id="defaultOpen">General Information</button>
             <button class="tablinks" onclick="openTab(event, 'Plants')">Native Plant Lists</button>
-            <button class="tablinks" onclick="openTab(event, 'Map')">Idaho Climate Map</button>
+            <button class="tablinks" onclick="openTab(event, 'Map')">Plant Map</button>
             <button class="tablinks" onclick="openTab(event, 'HowTo')">How to Plant</button>
             <button class="tablinks" onclick="openTab(event, 'Gallery')" style="float: right !important;">Native Plant Gallery</button>
         </div>
@@ -58,13 +58,13 @@
     <a href="https://snakeriverseeds.com/" target="_blank">Snake River Seed Cooperative</a>
     and <a href="https://klamathsiskiyouseeds.com/" target="_blank">Klamath-Siskiyou Native Seeds</a>.
 </p>
-<h6>Climate Map of Idaho</h6>
+<h6>Plant and Climate Map of Idaho</h6>
 <p>
-    This tab has an interactive map that shows what the coldest winter temperatures are across Idaho.
+    This tab has an interactive map in which you can search for the occurances of native plants in Idaho.
+    It has a climate overlay that shows what the coldest winter temperatures are across Idaho.
     Use this in conjunction with the cold hardiness temperatures listed on the plants page to decide what
     is suitable to grow in your area. For example, Longleaf Groundcherry will grow great in the red and
-    orange areas, but not so well in the cyan and blue areas. Put your address in the search bar to
-    easily find what kind of climate your yard is in.
+    orange areas, but rarely occurs in the wild in the cyan and blue areas.
 </p>
 <br />
 <h4>Our Yards: America's "New National Park"</h4>
@@ -101,8 +101,16 @@
 <p></p>
         </div>
         <div id="Plants" class="tabcontent">
-            <div class="table-container">
-                
+            <h3>Idaho Native Plant Lists</h3>
+<p>
+    The information in these tables is by no means exhaustive, but it is a great place to start if you want to learn
+    about where native plants grow and how to take care of them. Most of the major groups/genera are represented here,
+    and their unlisted relatives are likely to inhabit similar areas.
+</p>
+<br />
+<h4>Wildflowers and Forbs:</h4>
+<div class="table-container">
+    
     <div id="example-table-Wildflowers_and_Forbs"></div>
     <script>
     var table = new Tabulator("#example-table-Wildflowers_and_Forbs", {
@@ -114,9 +122,11 @@
     });
     </script>
     
-            </div>
-            <div class="table-container">
-                
+</div>
+<br />
+<h4>Shrubs:</h4>
+<div class="table-container">
+    
     <div id="example-table-Shrubs"></div>
     <script>
     var table = new Tabulator("#example-table-Shrubs", {
@@ -128,9 +138,11 @@
     });
     </script>
     
-            </div>
-            <div class="table-container">
-                
+</div>
+<br />
+<h4>Trees:</h4>
+<div class="table-container">
+    
     <div id="example-table-Trees"></div>
     <script>
     var table = new Tabulator("#example-table-Trees", {
@@ -142,10 +154,11 @@
     });
     </script>
     
-            </div>
+</div>
+<br />
         </div>
         <div id="Map" class="tabcontent">
-            <iframe src="pages/map/map.html" style="width: 100%; height: 700px;"></iframe>
+            <iframe src="pages/map/plant_finder.html" style="width: 100%; height: 1000px;"></iframe>
         </div>
         <div id="HowTo" class="tabcontent">
             <h3>How Do You Plant A Native Garden?</h3>
@@ -167,10 +180,13 @@
     <a href="https://www.spiralseed.co.uk" target="_blank">www.spiralseed.co.uk</a>)
 </p>
 <p>
-    When you are planting native gardens, we should try to imitate the conditions in which your plants are found in
+    When planting native gardens, you should try to imitate the conditions in which your plants are found in
     nature. It is a good idea to spend some time in wild places to familiarize yourself with those conditions. The
     "Light" category in the native plant lists can indicate whether the plant wants to grow under other plants, or if
-    it wants to be out in the sun.
+    it wants to be out in the sun. Most of the plants that are from semi-arid parts of the landscape will do fine with
+    little to no additional water. They are adapted to getting what they need from the rain and snow. Some of the plants
+    that occur at higher elevations or near streams will require a little supplemental water to stay healthy. At any
+    rate, you will conserve water by choosing to grow native plants.
 </p>
 <p>
     In a small yard setting, it can be useful to plant your trees closest to your fence and gradually planting smaller
@@ -469,8 +485,8 @@
   </div>
   
 
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
+  <div class="prev" onclick="plusSlides(-1)">❮</div>
+  <div class="next" onclick="plusSlides(1)">❯</div>
   
   <div class="caption-container"><p id="caption"></p></div>
   

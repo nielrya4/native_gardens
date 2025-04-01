@@ -106,24 +106,27 @@
             var dropdownSpecies = document.getElementById('speciesDropdown').value;
             var inputSpecies = document.getElementById('speciesInput').value.trim();
             var species = inputSpecies || dropdownSpecies;
+
             if (!species) return alert("Select or enter a plant name!");
+
             document.getElementById("loadingSpinner").style.display = "block";
+
             var bbox = { nelat: 49.001, nelng: -111.043, swlat: 41.988, swlng: -117.243 };
-            fetch(`https://api.inaturalist.org/v1/observations?q=${encodeURIComponent(species)}&per_page=200&quality_grade=research&nelat=${bbox.nelat}&nelng=${bbox.nelng}&swlat=${bbox.swlat}&swlng=${bbox.swlng}`)
+
+            fetch(`https://api.inaturalist.org/v1/observations?q=${encodeURIComponent(species)}&per_page=200&quality_grade=research&nelat=${bbox.nelat}&nelng=${bbox.nelng}&swlat=${bbox.swlat}&swlng=${bbox.swlng}&order_by=random`)
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("loadingSpinner").style.display = "none";
+
                     if (heatLayer) map.removeLayer(heatLayer);
+
                     if (data.results.length === 0) {
                         alert("No observations found in Idaho!");
                         return;
                     }
-                    let heatData = [];
-                    data.results.forEach(obs => {
-                        let lat = obs.geojson.coordinates[1];
-                        let lon = obs.geojson.coordinates[0];
-                        heatData.push([lat, lon, 0.5]);
-                    });
+
+                    let heatData = data.results.map(obs => [obs.geojson.coordinates[1], obs.geojson.coordinates[0], 0.5]);
+
                     heatLayer = L.heatLayer(heatData, {
                         radius: 20,
                         blur: 15,
@@ -136,6 +139,7 @@
                     console.error("Error fetching data:", error);
                 });
         }
+
     </script>
 </body>
 </html>

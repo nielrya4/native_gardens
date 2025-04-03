@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
     <style>
-        #map { height: 600px; width: 100%; border-radius: 10px; margin-top: 20px; position: relative; }
+        #map {
+            height: 600px;
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            position: relative;
+        }
         .leaflet-bottom.leaflet-right {
             display: flex;
             flex-direction: column;
@@ -25,12 +31,36 @@
             margin-right: 10px;
             width: 150px;
         }
+        .attribution {
+            color: white !important;
+        }
+        .attribution a:hover {
+            color: black !important;
+        }
+        #loadingOverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        #spinnerContainer {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
     </style>
 </head>
-<body class="bg-light">
+<body class="bg-light" style="background-color: #30a5a5 !important;">
     <div class="container mt-4">
         <div class="card shadow p-4">
-            <h4 class="mb-3 text-center">Search for Plants in Idaho</h4>
             <div class="row g-3 align-items-center">
                 <div class="col-md-4">
                     <label for="speciesDropdown" class="form-label">Select a plant species:</label>
@@ -47,35 +77,26 @@
                         <option value="Lomatium dissectum">Fernleaf Biscuitroot</option>
                     </select>
                 </div>
-
                 <div class="col-md-4">
                     <label for="speciesInput" class="form-label">Or enter a plant name:</label>
                     <input type="text" id="speciesInput" class="form-control" placeholder="Common or scientific name">
                 </div>
-
                 <div class="col-md-4 text-center">
                     <button class="btn btn-primary mt-4 w-100" onclick="searchSpecies()">Search</button>
-                    <button class="btn btn-warning mt-2 w-100" onclick="toggleClimateOverlay()">Toggle Climate Overlay</button>
                 </div>
             </div>
         </div>
-        <div id="loadingSpinner" class="text-center" style="display: none;">
-            <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-            <p>Loading data...</p>
-        </div>
-        <div id="map" class="shadow">
-            <div id="legend" class="leaflet-control leaflet-bar leaflet-bottom leaflet-right">
-                <b>Mean Annual Extreme Low Temperature (F)</b><br>
-                <i style="background:rgba(0, 0, 255, 0.5); width: 20px; height: 20px; display: inline-block;"></i> &nbsp; -20 and below<br>
-                <i style="background:rgb(0,255,199); width: 20px; height: 20px; display: inline-block;"></i> &nbsp; -20 to -10<br>
-                <i style="background:rgba(255,220,0,0.96); width: 20px; height: 20px; display: inline-block;"></i> &nbsp; -10 to -5<br>
-                <i style="background:rgba(255,122,16,0.94); width: 20px; height: 20px; display: inline-block;"></i> &nbsp; -5 to 5<br>
-                <i style="background:rgba(205,21,49,0.7); width: 20px; height: 20px; display: inline-block;"></i> &nbsp; 5 to 10<br>
+        <div id="map" class="shadow position-relative">
+            <div id="loadingOverlay">
+                <div id="spinnerContainer">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div>Loading data...</div>
+                </div>
             </div>
         </div>
-        <p>Data from <a href="https://www.inaturalist.org/" target="_blank">iNaturalist</a></p>
+        <p class="attribution">Data from <a class="attribution" href="https://www.inaturalist.org/" target="_blank">iNaturalist</a></p>
     </div>
     <script>
         var map = L.map('map').setView([44.0682, -114.742], 6);
@@ -85,23 +106,20 @@
             "ESRI StreetMap": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}')
         };
         baseLayers["ESRI StreetMap"].addTo(map);
-        L.control.layers(baseLayers).addTo(map);
-        var heatLayer = null;
-        var climateOverlay = null;
-        var useClimateOverlay = false;
+
+        // Climate overlay settings
         var climateImagePath = "/img/maps/idaho_colormap_transparent.png";
         var climateBounds = [[41.988, -117.243], [49.001, -111.043]];
-        function toggleClimateOverlay() {
-            var legend = document.getElementById("legend");
-            if (useClimateOverlay) {
-                legend.style.display = "none";
-                map.removeLayer(climateOverlay);
-            } else {
-                legend.style.display = "block";
-                climateOverlay = L.imageOverlay(climateImagePath, climateBounds, { opacity: 0.4 }).addTo(map);
-            }
-            useClimateOverlay = !useClimateOverlay;
-        }
+        var climateOverlay = L.imageOverlay(climateImagePath, climateBounds, { opacity: 0.4 });
+
+        // Add overlays to layer control
+        var overlays = { "Climate Overlay": climateOverlay };
+
+        // Add layer control to map
+        L.control.layers(baseLayers, overlays).addTo(map);
+
+        var heatLayer = null;
+
         function searchSpecies() {
             var dropdownSpecies = document.getElementById('speciesDropdown').value;
             var inputSpecies = document.getElementById('speciesInput').value.trim();
@@ -109,14 +127,14 @@
 
             if (!species) return alert("Select or enter a plant name!");
 
-            document.getElementById("loadingSpinner").style.display = "block";
+            document.getElementById("loadingOverlay").style.display = "flex";
 
             var bbox = { nelat: 49.001, nelng: -111.043, swlat: 41.988, swlng: -117.243 };
 
             fetch(`https://api.inaturalist.org/v1/observations?q=${encodeURIComponent(species)}&per_page=200&quality_grade=research&nelat=${bbox.nelat}&nelng=${bbox.nelng}&swlat=${bbox.swlat}&swlng=${bbox.swlng}&order_by=random`)
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById("loadingSpinner").style.display = "none";
+                    document.getElementById("loadingOverlay").style.display = "none";
 
                     if (heatLayer) map.removeLayer(heatLayer);
 
@@ -135,11 +153,10 @@
                     }).addTo(map);
                 })
                 .catch(error => {
-                    document.getElementById("loadingSpinner").style.display = "none";
+                    document.getElementById("loadingOverlay").style.display = "none";
                     console.error("Error fetching data:", error);
                 });
         }
-
     </script>
 </body>
 </html>

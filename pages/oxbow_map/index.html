@@ -1,0 +1,4130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9076f0d2705e2cba35e6494ceec2ca6c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9076f0d2705e2cba35e6494ceec2ca6c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9076f0d2705e2cba35e6494ceec2ca6c = L.map(
+                "map_9076f0d2705e2cba35e6494ceec2ca6c",
+                {
+                    center: [42.85, -112.4],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cc89e4685e245900a3b5ed1e7973f8bb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cc89e4685e245900a3b5ed1e7973f8bb.addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var marker_0464201607c5535ea5edbd9d2ef954b6 = L.marker(
+                [42.8043252, -112.3741761997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_532ef93dd9361b1bc22f63d02a173d84 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd6bf6db9228069f55e02cebd0b2be1b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89563d082d5d1f5e9aa109227f83ab05 = $(`<div id="html_89563d082d5d1f5e9aa109227f83ab05" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485160755/medium.jpeg" class="card-img-top" alt="Fernleaf Biscuitroot">       <div class="card-body">         <h5 class="card-title">Fernleaf Biscuitroot</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Lomatium dissectum</em></h6>         <a href="https://www.inaturalist.org/observations/269807839" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_dd6bf6db9228069f55e02cebd0b2be1b.setContent(html_89563d082d5d1f5e9aa109227f83ab05);
+            
+        
+
+        marker_0464201607c5535ea5edbd9d2ef954b6.bindPopup(popup_dd6bf6db9228069f55e02cebd0b2be1b)
+        ;
+
+        
+    
+    
+                marker_0464201607c5535ea5edbd9d2ef954b6.setIcon(icon_532ef93dd9361b1bc22f63d02a173d84);
+            
+    
+            var marker_ea02e4769651e913a0a851d3218da600 = L.marker(
+                [42.8042625, -112.3741543997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_c9c69e8e984588ec735f82fafec7918b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c28fee21fedbb23e2c6bac5c749f074b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_84680e89e1180144fb575ff004916a21 = $(`<div id="html_84680e89e1180144fb575ff004916a21" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485160024/medium.jpeg" class="card-img-top" alt="Fernleaf Biscuitroot">       <div class="card-body">         <h5 class="card-title">Fernleaf Biscuitroot</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Lomatium dissectum</em></h6>         <a href="https://www.inaturalist.org/observations/269807408" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_c28fee21fedbb23e2c6bac5c749f074b.setContent(html_84680e89e1180144fb575ff004916a21);
+            
+        
+
+        marker_ea02e4769651e913a0a851d3218da600.bindPopup(popup_c28fee21fedbb23e2c6bac5c749f074b)
+        ;
+
+        
+    
+    
+                marker_ea02e4769651e913a0a851d3218da600.setIcon(icon_c9c69e8e984588ec735f82fafec7918b);
+            
+    
+            var marker_8a4bf71e9ac5e93c13986378efc6ebc3 = L.marker(
+                [42.8042625, -112.3741543997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_f82adf8df623b3d370c316ad485da917 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a4f5da2ffcfc12dbf69f8420551b928 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b622a2af565b482674aef532e6ef6448 = $(`<div id="html_b622a2af565b482674aef532e6ef6448" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485160715/medium.jpeg" class="card-img-top" alt="Fernleaf Biscuitroot">       <div class="card-body">         <h5 class="card-title">Fernleaf Biscuitroot</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Lomatium dissectum</em></h6>         <a href="https://www.inaturalist.org/observations/269807820" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_7a4f5da2ffcfc12dbf69f8420551b928.setContent(html_b622a2af565b482674aef532e6ef6448);
+            
+        
+
+        marker_8a4bf71e9ac5e93c13986378efc6ebc3.bindPopup(popup_7a4f5da2ffcfc12dbf69f8420551b928)
+        ;
+
+        
+    
+    
+                marker_8a4bf71e9ac5e93c13986378efc6ebc3.setIcon(icon_f82adf8df623b3d370c316ad485da917);
+            
+    
+            var marker_02d0e869359a0fed21f4fe6f467bc91a = L.marker(
+                [42.8042069997, -112.3740922],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_701dd119df91d30e60cd806d3bc38ea6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71af84f13d7cb958a3e9f5adb74ad516 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_151c46e820a7df822a9331b40c84a4a1 = $(`<div id="html_151c46e820a7df822a9331b40c84a4a1" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485159771/medium.jpeg" class="card-img-top" alt="Fernleaf Biscuitroot">       <div class="card-body">         <h5 class="card-title">Fernleaf Biscuitroot</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Lomatium dissectum</em></h6>         <a href="https://www.inaturalist.org/observations/269807317" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_71af84f13d7cb958a3e9f5adb74ad516.setContent(html_151c46e820a7df822a9331b40c84a4a1);
+            
+        
+
+        marker_02d0e869359a0fed21f4fe6f467bc91a.bindPopup(popup_71af84f13d7cb958a3e9f5adb74ad516)
+        ;
+
+        
+    
+    
+                marker_02d0e869359a0fed21f4fe6f467bc91a.setIcon(icon_701dd119df91d30e60cd806d3bc38ea6);
+            
+    
+            var marker_14fc4db48334a695714453a942fba885 = L.marker(
+                [42.8042561, -112.3740815],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_af99a9d7951306574e82f9d916ea0a2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b70bc09364e688be47601ccb25600743 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b869d453e48ca69888117cab4180565 = $(`<div id="html_9b869d453e48ca69888117cab4180565" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485159583/medium.jpeg" class="card-img-top" alt="Fernleaf Biscuitroot">       <div class="card-body">         <h5 class="card-title">Fernleaf Biscuitroot</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Lomatium dissectum</em></h6>         <a href="https://www.inaturalist.org/observations/269807176" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_b70bc09364e688be47601ccb25600743.setContent(html_9b869d453e48ca69888117cab4180565);
+            
+        
+
+        marker_14fc4db48334a695714453a942fba885.bindPopup(popup_b70bc09364e688be47601ccb25600743)
+        ;
+
+        
+    
+    
+                marker_14fc4db48334a695714453a942fba885.setIcon(icon_af99a9d7951306574e82f9d916ea0a2f);
+            
+    
+            var marker_827b6462aad6ced64a9e8fb97920b989 = L.marker(
+                [42.8042482997, -112.3741167997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_70dd63ac285d70e396dc642b4c75493f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f826f82d551fc61aefb0c7baeb1bb3cd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_703177f4c1cfb066c4263c49e8ee26b9 = $(`<div id="html_703177f4c1cfb066c4263c49e8ee26b9" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485159513/medium.jpeg" class="card-img-top" alt="golden currant">       <div class="card-body">         <h5 class="card-title">golden currant</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Ribes aureum</em></h6>         <a href="https://www.inaturalist.org/observations/269807150" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_f826f82d551fc61aefb0c7baeb1bb3cd.setContent(html_703177f4c1cfb066c4263c49e8ee26b9);
+            
+        
+
+        marker_827b6462aad6ced64a9e8fb97920b989.bindPopup(popup_f826f82d551fc61aefb0c7baeb1bb3cd)
+        ;
+
+        
+    
+    
+                marker_827b6462aad6ced64a9e8fb97920b989.setIcon(icon_70dd63ac285d70e396dc642b4c75493f);
+            
+    
+            var marker_54c1f16dcff7e629b1629131af05a477 = L.marker(
+                [42.8042563997, -112.3745418997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_9442b56ab541098501183aa1b50e0901 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_601dff5410fd2bad7601d2cbf8fe4433 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5da7823c9b31168c988f9e608002368a = $(`<div id="html_5da7823c9b31168c988f9e608002368a" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485159188/medium.jpeg" class="card-img-top" alt="hemp dogbane">       <div class="card-body">         <h5 class="card-title">hemp dogbane</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Apocynum cannabinum</em></h6>         <a href="https://www.inaturalist.org/observations/269806978" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_601dff5410fd2bad7601d2cbf8fe4433.setContent(html_5da7823c9b31168c988f9e608002368a);
+            
+        
+
+        marker_54c1f16dcff7e629b1629131af05a477.bindPopup(popup_601dff5410fd2bad7601d2cbf8fe4433)
+        ;
+
+        
+    
+    
+                marker_54c1f16dcff7e629b1629131af05a477.setIcon(icon_9442b56ab541098501183aa1b50e0901);
+            
+    
+            var marker_5931dedc454e4745c29e59566d28c211 = L.marker(
+                [42.8048556997, -112.3748247],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_5324142f4fca1d1ad3c6acd9da8cee91 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d0e36053ea1b37f2dd5fe1273f18425d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4917f125341a2a14d269acae5bb57b13 = $(`<div id="html_4917f125341a2a14d269acae5bb57b13" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485159092/medium.jpeg" class="card-img-top" alt="Big Sagebrush">       <div class="card-body">         <h5 class="card-title">Big Sagebrush</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Artemisia tridentata</em></h6>         <a href="https://www.inaturalist.org/observations/269806920" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_d0e36053ea1b37f2dd5fe1273f18425d.setContent(html_4917f125341a2a14d269acae5bb57b13);
+            
+        
+
+        marker_5931dedc454e4745c29e59566d28c211.bindPopup(popup_d0e36053ea1b37f2dd5fe1273f18425d)
+        ;
+
+        
+    
+    
+                marker_5931dedc454e4745c29e59566d28c211.setIcon(icon_5324142f4fca1d1ad3c6acd9da8cee91);
+            
+    
+            var marker_dcc2cecb21c0468cde4dee251086c969 = L.marker(
+                [42.8048689722, -112.3748329722],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_86285da41c01d0eb2881d1d466848279 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_603474688ad975d8878245bbe545e772 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_646a42c5e8dee93ace4b32d044abb319 = $(`<div id="html_646a42c5e8dee93ace4b32d044abb319" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485158988/medium.jpeg" class="card-img-top" alt="Western White Clematis">       <div class="card-body">         <h5 class="card-title">Western White Clematis</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Clematis ligusticifolia</em></h6>         <a href="https://www.inaturalist.org/observations/269806873" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_603474688ad975d8878245bbe545e772.setContent(html_646a42c5e8dee93ace4b32d044abb319);
+            
+        
+
+        marker_dcc2cecb21c0468cde4dee251086c969.bindPopup(popup_603474688ad975d8878245bbe545e772)
+        ;
+
+        
+    
+    
+                marker_dcc2cecb21c0468cde4dee251086c969.setIcon(icon_86285da41c01d0eb2881d1d466848279);
+            
+    
+            var marker_11814aceb33b28c61821da1256b6e86d = L.marker(
+                [42.8048689, -112.3749463997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_21b95d42f81d2552d115e9b586f20457 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4d0fd0a32c1779f1138b9a366fd75b6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_85cb8f67685b612f775f3327284c943f = $(`<div id="html_85cb8f67685b612f775f3327284c943f" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485158880/medium.jpeg" class="card-img-top" alt="Utah Juniper">       <div class="card-body">         <h5 class="card-title">Utah Juniper</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Juniperus osteosperma</em></h6>         <a href="https://www.inaturalist.org/observations/269806803" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_a4d0fd0a32c1779f1138b9a366fd75b6.setContent(html_85cb8f67685b612f775f3327284c943f);
+            
+        
+
+        marker_11814aceb33b28c61821da1256b6e86d.bindPopup(popup_a4d0fd0a32c1779f1138b9a366fd75b6)
+        ;
+
+        
+    
+    
+                marker_11814aceb33b28c61821da1256b6e86d.setIcon(icon_21b95d42f81d2552d115e9b586f20457);
+            
+    
+            var marker_c8e2f17ae6a6c9c020e8f5c165a81cb3 = L.marker(
+                [42.8050259997, -112.3752939],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_4cc706e23590f0afbc5dc4c6f64a7999 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_821d3df2283f1f01e72b12ddde729713 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7b4d51e1d71ecff4d09b5d0d555bdd02 = $(`<div id="html_7b4d51e1d71ecff4d09b5d0d555bdd02" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485158756/medium.jpeg" class="card-img-top" alt="slender stinging nettle">       <div class="card-body">         <h5 class="card-title">slender stinging nettle</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Urtica gracilis</em></h6>         <a href="https://www.inaturalist.org/observations/269806750" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_821d3df2283f1f01e72b12ddde729713.setContent(html_7b4d51e1d71ecff4d09b5d0d555bdd02);
+            
+        
+
+        marker_c8e2f17ae6a6c9c020e8f5c165a81cb3.bindPopup(popup_821d3df2283f1f01e72b12ddde729713)
+        ;
+
+        
+    
+    
+                marker_c8e2f17ae6a6c9c020e8f5c165a81cb3.setIcon(icon_4cc706e23590f0afbc5dc4c6f64a7999);
+            
+    
+            var marker_f0d0cd03b6a4ff02ae13366403a7cf1b = L.marker(
+                [42.8050259997, -112.3752939],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_b9781e3ae55532afe35fc50932d46141 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f1ad8dd289272e714b0117002ad3a84 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0c67412873f68b26f41a211ab6257e8e = $(`<div id="html_0c67412873f68b26f41a211ab6257e8e" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485158634/medium.jpeg" class="card-img-top" alt="great mullein">       <div class="card-body">         <h5 class="card-title">great mullein</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Verbascum thapsus</em></h6>         <a href="https://www.inaturalist.org/observations/269806678" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_8f1ad8dd289272e714b0117002ad3a84.setContent(html_0c67412873f68b26f41a211ab6257e8e);
+            
+        
+
+        marker_f0d0cd03b6a4ff02ae13366403a7cf1b.bindPopup(popup_8f1ad8dd289272e714b0117002ad3a84)
+        ;
+
+        
+    
+    
+                marker_f0d0cd03b6a4ff02ae13366403a7cf1b.setIcon(icon_b9781e3ae55532afe35fc50932d46141);
+            
+    
+            var marker_5174edb4d0426b3bb43a0f3b12c0c443 = L.marker(
+                [42.8051487997, -112.3755464],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_d8f167bf19aea9fadbc3a82df5a6d932 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_172c33b386efd630c067d7c95f12209f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9c56af990364340da667adaacc0f16d5 = $(`<div id="html_9c56af990364340da667adaacc0f16d5" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485158518/medium.jpeg" class="card-img-top" alt="golden currant">       <div class="card-body">         <h5 class="card-title">golden currant</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Ribes aureum</em></h6>         <a href="https://www.inaturalist.org/observations/269806598" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_172c33b386efd630c067d7c95f12209f.setContent(html_9c56af990364340da667adaacc0f16d5);
+            
+        
+
+        marker_5174edb4d0426b3bb43a0f3b12c0c443.bindPopup(popup_172c33b386efd630c067d7c95f12209f)
+        ;
+
+        
+    
+    
+                marker_5174edb4d0426b3bb43a0f3b12c0c443.setIcon(icon_d8f167bf19aea9fadbc3a82df5a6d932);
+            
+    
+            var marker_b7c10495860f98186b50324e8d7fa819 = L.marker(
+                [42.8053141997, -112.3757039997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_48a7f28e8e5b3cf6312f164d270e841d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03ba2dc649888906a87d1e6330626eed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cceccbd37836cce9cf5c340ce5fd1e53 = $(`<div id="html_cceccbd37836cce9cf5c340ce5fd1e53" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485158401/medium.jpeg" class="card-img-top" alt="hemp dogbane">       <div class="card-body">         <h5 class="card-title">hemp dogbane</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Apocynum cannabinum</em></h6>         <a href="https://www.inaturalist.org/observations/269806553" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_03ba2dc649888906a87d1e6330626eed.setContent(html_cceccbd37836cce9cf5c340ce5fd1e53);
+            
+        
+
+        marker_b7c10495860f98186b50324e8d7fa819.bindPopup(popup_03ba2dc649888906a87d1e6330626eed)
+        ;
+
+        
+    
+    
+                marker_b7c10495860f98186b50324e8d7fa819.setIcon(icon_48a7f28e8e5b3cf6312f164d270e841d);
+            
+    
+            var marker_7c0d40f5c0e0c1de3c0378f67dd650b5 = L.marker(
+                [42.8055147, -112.3758928],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_9670f8b21f5753e2d5de29dd024e2b74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_570a395688c501dbb8838cdb1ef385b0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_881c5e0b65b6cf3875ec09cdb1a77984 = $(`<div id="html_881c5e0b65b6cf3875ec09cdb1a77984" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485158215/medium.jpeg" class="card-img-top" alt="Munro's Globemallow">       <div class="card-body">         <h5 class="card-title">Munro's Globemallow</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Sphaeralcea munroana</em></h6>         <a href="https://www.inaturalist.org/observations/269806469" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_570a395688c501dbb8838cdb1ef385b0.setContent(html_881c5e0b65b6cf3875ec09cdb1a77984);
+            
+        
+
+        marker_7c0d40f5c0e0c1de3c0378f67dd650b5.bindPopup(popup_570a395688c501dbb8838cdb1ef385b0)
+        ;
+
+        
+    
+    
+                marker_7c0d40f5c0e0c1de3c0378f67dd650b5.setIcon(icon_9670f8b21f5753e2d5de29dd024e2b74);
+            
+    
+            var marker_21e1d34584eea6085728691fc4f3fc31 = L.marker(
+                [42.8067126997, -112.3764613997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_974241542ca4942609eb6a1b31553edf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a403201103f638d3a0daa6f386242c6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cc5efa3a7808435bf67790ef679c9195 = $(`<div id="html_cc5efa3a7808435bf67790ef679c9195" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485158127/medium.jpeg" class="card-img-top" alt="Western White Clematis">       <div class="card-body">         <h5 class="card-title">Western White Clematis</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Clematis ligusticifolia</em></h6>         <a href="https://www.inaturalist.org/observations/269806422" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_9a403201103f638d3a0daa6f386242c6.setContent(html_cc5efa3a7808435bf67790ef679c9195);
+            
+        
+
+        marker_21e1d34584eea6085728691fc4f3fc31.bindPopup(popup_9a403201103f638d3a0daa6f386242c6)
+        ;
+
+        
+    
+    
+                marker_21e1d34584eea6085728691fc4f3fc31.setIcon(icon_974241542ca4942609eb6a1b31553edf);
+            
+    
+            var marker_314c8262f91b82c40804a5e0c512d833 = L.marker(
+                [42.8067303997, -112.3764787],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_f983c91e0950e7e6a7bf59ecd23cd899 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b7be73df87b11a887bfd1516b6c2e51d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb55deeea2e974f052aef5690a176b92 = $(`<div id="html_cb55deeea2e974f052aef5690a176b92" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485158013/medium.jpeg" class="card-img-top" alt="golden currant">       <div class="card-body">         <h5 class="card-title">golden currant</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Ribes aureum</em></h6>         <a href="https://www.inaturalist.org/observations/269806383" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_b7be73df87b11a887bfd1516b6c2e51d.setContent(html_cb55deeea2e974f052aef5690a176b92);
+            
+        
+
+        marker_314c8262f91b82c40804a5e0c512d833.bindPopup(popup_b7be73df87b11a887bfd1516b6c2e51d)
+        ;
+
+        
+    
+    
+                marker_314c8262f91b82c40804a5e0c512d833.setIcon(icon_f983c91e0950e7e6a7bf59ecd23cd899);
+            
+    
+            var marker_d39698c3ed94872a17f60a860c37d0fa = L.marker(
+                [42.8067403, -112.3764776],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_b5cc7d3c23e2d5c28e8fefb243bd1999 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5edf82eeec0729251b9e769ab422d029 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_31d68f7c7177a2b7973f4614c1bc1bf1 = $(`<div id="html_31d68f7c7177a2b7973f4614c1bc1bf1" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485157899/medium.jpeg" class="card-img-top" alt="Big Sagebrush">       <div class="card-body">         <h5 class="card-title">Big Sagebrush</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Artemisia tridentata</em></h6>         <a href="https://www.inaturalist.org/observations/269806343" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_5edf82eeec0729251b9e769ab422d029.setContent(html_31d68f7c7177a2b7973f4614c1bc1bf1);
+            
+        
+
+        marker_d39698c3ed94872a17f60a860c37d0fa.bindPopup(popup_5edf82eeec0729251b9e769ab422d029)
+        ;
+
+        
+    
+    
+                marker_d39698c3ed94872a17f60a860c37d0fa.setIcon(icon_b5cc7d3c23e2d5c28e8fefb243bd1999);
+            
+    
+            var marker_ce5100de72a473a35e5fe86a152b471c = L.marker(
+                [42.8068948, -112.3766798],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_89e676135cf8097270dabbc225d918c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6507adb785efe6f7e8f89d2861471031 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_49cdeb712b3be22575fdf52681633d17 = $(`<div id="html_49cdeb712b3be22575fdf52681633d17" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485157770/medium.jpeg" class="card-img-top" alt="Yellow-bellied Marmot">       <div class="card-body">         <h5 class="card-title">Yellow-bellied Marmot</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Marmota flaviventris</em></h6>         <a href="https://www.inaturalist.org/observations/269806293" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_6507adb785efe6f7e8f89d2861471031.setContent(html_49cdeb712b3be22575fdf52681633d17);
+            
+        
+
+        marker_ce5100de72a473a35e5fe86a152b471c.bindPopup(popup_6507adb785efe6f7e8f89d2861471031)
+        ;
+
+        
+    
+    
+                marker_ce5100de72a473a35e5fe86a152b471c.setIcon(icon_89e676135cf8097270dabbc225d918c3);
+            
+    
+            var marker_b643a2dac6f47748cbd81ad41e062752 = L.marker(
+                [42.8070599997, -112.3768711],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_43cf91c0a0b4ede0bea87e1855b32237 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5db9e69460475f8a3a3d26c9e47e4bb2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_94c7084100f0c0087ef6e4f03f9d3486 = $(`<div id="html_94c7084100f0c0087ef6e4f03f9d3486" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485157640/medium.jpeg" class="card-img-top" alt="golden currant">       <div class="card-body">         <h5 class="card-title">golden currant</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Ribes aureum</em></h6>         <a href="https://www.inaturalist.org/observations/269806236" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_5db9e69460475f8a3a3d26c9e47e4bb2.setContent(html_94c7084100f0c0087ef6e4f03f9d3486);
+            
+        
+
+        marker_b643a2dac6f47748cbd81ad41e062752.bindPopup(popup_5db9e69460475f8a3a3d26c9e47e4bb2)
+        ;
+
+        
+    
+    
+                marker_b643a2dac6f47748cbd81ad41e062752.setIcon(icon_43cf91c0a0b4ede0bea87e1855b32237);
+            
+    
+            var marker_980a5ba83b3a0a52edc0fb5d58b1b31e = L.marker(
+                [42.8070599997, -112.3768711],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_8dfcd45b79e054124de769786af18e0c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2598bc66cade855e36635a9cb3a00b26 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ca40b59f117d1c5e1eff4c80fe993c20 = $(`<div id="html_ca40b59f117d1c5e1eff4c80fe993c20" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485157528/medium.jpeg" class="card-img-top" alt="Yellow Salsify">       <div class="card-body">         <h5 class="card-title">Yellow Salsify</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Tragopogon dubius</em></h6>         <a href="https://www.inaturalist.org/observations/269806170" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_2598bc66cade855e36635a9cb3a00b26.setContent(html_ca40b59f117d1c5e1eff4c80fe993c20);
+            
+        
+
+        marker_980a5ba83b3a0a52edc0fb5d58b1b31e.bindPopup(popup_2598bc66cade855e36635a9cb3a00b26)
+        ;
+
+        
+    
+    
+                marker_980a5ba83b3a0a52edc0fb5d58b1b31e.setIcon(icon_8dfcd45b79e054124de769786af18e0c);
+            
+    
+            var marker_ee1842e6f1e4369b8ff932bb32dbedec = L.marker(
+                [42.8073358997, -112.3772845],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_f16565a1d98c8e2c344039c40287de2a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f504dd11902c3d791747e2f3079e9792 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ac0ffd68365de7b438e6e8cc9f1fa11f = $(`<div id="html_ac0ffd68365de7b438e6e8cc9f1fa11f" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485157278/medium.jpeg" class="card-img-top" alt="Silver Wormwood">       <div class="card-body">         <h5 class="card-title">Silver Wormwood</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Artemisia ludoviciana</em></h6>         <a href="https://www.inaturalist.org/observations/269806058" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_f504dd11902c3d791747e2f3079e9792.setContent(html_ac0ffd68365de7b438e6e8cc9f1fa11f);
+            
+        
+
+        marker_ee1842e6f1e4369b8ff932bb32dbedec.bindPopup(popup_f504dd11902c3d791747e2f3079e9792)
+        ;
+
+        
+    
+    
+                marker_ee1842e6f1e4369b8ff932bb32dbedec.setIcon(icon_f16565a1d98c8e2c344039c40287de2a);
+            
+    
+            var marker_d48e1ee311863e6083ff67450251909a = L.marker(
+                [42.8073894997, -112.3773395],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_7f456c1d82cb1153aa82330fe2fc8314 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e684afb81ff38c6761582bb21da1315 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_088a801efb0a673f7d2650a3cd389e23 = $(`<div id="html_088a801efb0a673f7d2650a3cd389e23" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485157158/medium.jpeg" class="card-img-top" alt="western poison ivy">       <div class="card-body">         <h5 class="card-title">western poison ivy</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Toxicodendron rydbergii</em></h6>         <a href="https://www.inaturalist.org/observations/269806004" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_3e684afb81ff38c6761582bb21da1315.setContent(html_088a801efb0a673f7d2650a3cd389e23);
+            
+        
+
+        marker_d48e1ee311863e6083ff67450251909a.bindPopup(popup_3e684afb81ff38c6761582bb21da1315)
+        ;
+
+        
+    
+    
+                marker_d48e1ee311863e6083ff67450251909a.setIcon(icon_7f456c1d82cb1153aa82330fe2fc8314);
+            
+    
+            var marker_cb0be600b7aebe804ba877ad336c4bc3 = L.marker(
+                [42.8074129722, -112.3774169722],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_a8733dfd1663d38e6a5e75eb9c74cca9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1467e879fef23569e8788091e1708673 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dd005c440c15fe96d55bb38a1a46a830 = $(`<div id="html_dd005c440c15fe96d55bb38a1a46a830" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485156888/medium.jpeg" class="card-img-top" alt="dicots">       <div class="card-body">         <h5 class="card-title">dicots</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Magnoliopsida</em></h6>         <a href="https://www.inaturalist.org/observations/269805886" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_1467e879fef23569e8788091e1708673.setContent(html_dd005c440c15fe96d55bb38a1a46a830);
+            
+        
+
+        marker_cb0be600b7aebe804ba877ad336c4bc3.bindPopup(popup_1467e879fef23569e8788091e1708673)
+        ;
+
+        
+    
+    
+                marker_cb0be600b7aebe804ba877ad336c4bc3.setIcon(icon_a8733dfd1663d38e6a5e75eb9c74cca9);
+            
+    
+            var marker_6b3db14fefbe36f17a26b837e351cb34 = L.marker(
+                [42.8074146, -112.3774372997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_f2c959d1c8c75aa6cbe7bbc52561e30b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_22fd3b04169b1a6cda03e5c832bd191a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8117e795fdd1ff5688939abae68c104e = $(`<div id="html_8117e795fdd1ff5688939abae68c104e" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485156709/medium.jpeg" class="card-img-top" alt="hound's-tongue">       <div class="card-body">         <h5 class="card-title">hound's-tongue</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Cynoglossum officinale</em></h6>         <a href="https://www.inaturalist.org/observations/269805815" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_22fd3b04169b1a6cda03e5c832bd191a.setContent(html_8117e795fdd1ff5688939abae68c104e);
+            
+        
+
+        marker_6b3db14fefbe36f17a26b837e351cb34.bindPopup(popup_22fd3b04169b1a6cda03e5c832bd191a)
+        ;
+
+        
+    
+    
+                marker_6b3db14fefbe36f17a26b837e351cb34.setIcon(icon_f2c959d1c8c75aa6cbe7bbc52561e30b);
+            
+    
+            var marker_bd9d1f337ec4f1094ba3041d8f6562fd = L.marker(
+                [42.8074146, -112.3774372997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_f72cf2ebe7ef9a15941e6add51f0a2be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f741de977848f4a65a1feeb97ab0627 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_57e893fd6c806258e49c305e9af6fc5c = $(`<div id="html_57e893fd6c806258e49c305e9af6fc5c" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485156557/medium.jpeg" class="card-img-top" alt="White Horehound">       <div class="card-body">         <h5 class="card-title">White Horehound</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Marrubium vulgare</em></h6>         <a href="https://www.inaturalist.org/observations/269805758" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_5f741de977848f4a65a1feeb97ab0627.setContent(html_57e893fd6c806258e49c305e9af6fc5c);
+            
+        
+
+        marker_bd9d1f337ec4f1094ba3041d8f6562fd.bindPopup(popup_5f741de977848f4a65a1feeb97ab0627)
+        ;
+
+        
+    
+    
+                marker_bd9d1f337ec4f1094ba3041d8f6562fd.setIcon(icon_f72cf2ebe7ef9a15941e6add51f0a2be);
+            
+    
+            var marker_f8c906606205eb01b15ee7fed5e36df0 = L.marker(
+                [42.8074146, -112.3774372997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_1631e43b2f5a2515ae68ed745e3e86c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4ce5f79d911af42435f651b65e8031f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9fda75a319fb0f61883766baf63c57f0 = $(`<div id="html_9fda75a319fb0f61883766baf63c57f0" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/485156398/medium.jpeg" class="card-img-top" alt="Munro's Globemallow">       <div class="card-body">         <h5 class="card-title">Munro's Globemallow</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Sphaeralcea munroana</em></h6>         <a href="https://www.inaturalist.org/observations/269805685" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_e4ce5f79d911af42435f651b65e8031f.setContent(html_9fda75a319fb0f61883766baf63c57f0);
+            
+        
+
+        marker_f8c906606205eb01b15ee7fed5e36df0.bindPopup(popup_e4ce5f79d911af42435f651b65e8031f)
+        ;
+
+        
+    
+    
+                marker_f8c906606205eb01b15ee7fed5e36df0.setIcon(icon_1631e43b2f5a2515ae68ed745e3e86c5);
+            
+    
+            var marker_1edb42bce52b941f6e4bd6b027cb1f07 = L.marker(
+                [42.8074113997, -112.3774439],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_ef0be7eccbc32079d7d3b65b0b9bb913 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_78d205134de30ad77e4f4254ed46d975 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b6b9d9a602baf04cb1b8ca35e5786279 = $(`<div id="html_b6b9d9a602baf04cb1b8ca35e5786279" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/484575374/medium.jpeg" class="card-img-top" alt="Plains Pricklypear">       <div class="card-body">         <h5 class="card-title">Plains Pricklypear</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Opuntia polyacantha</em></h6>         <a href="https://www.inaturalist.org/observations/269504310" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_78d205134de30ad77e4f4254ed46d975.setContent(html_b6b9d9a602baf04cb1b8ca35e5786279);
+            
+        
+
+        marker_1edb42bce52b941f6e4bd6b027cb1f07.bindPopup(popup_78d205134de30ad77e4f4254ed46d975)
+        ;
+
+        
+    
+    
+                marker_1edb42bce52b941f6e4bd6b027cb1f07.setIcon(icon_ef0be7eccbc32079d7d3b65b0b9bb913);
+            
+    
+            var marker_39b01e9bc8c86acbb2eb3f0b782447cc = L.marker(
+                [42.8074190997, -112.3774643997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_21d90db37cf948aa6d7c794497a5ad24 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b99cef4315f1b35260e5af3099782a3f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ee0746fae9ecd4ecc4fa08ec9822aecd = $(`<div id="html_ee0746fae9ecd4ecc4fa08ec9822aecd" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/484575275/medium.jpeg" class="card-img-top" alt="Redstem Stork's-bill">       <div class="card-body">         <h5 class="card-title">Redstem Stork's-bill</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Erodium cicutarium</em></h6>         <a href="https://www.inaturalist.org/observations/269504247" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_b99cef4315f1b35260e5af3099782a3f.setContent(html_ee0746fae9ecd4ecc4fa08ec9822aecd);
+            
+        
+
+        marker_39b01e9bc8c86acbb2eb3f0b782447cc.bindPopup(popup_b99cef4315f1b35260e5af3099782a3f)
+        ;
+
+        
+    
+    
+                marker_39b01e9bc8c86acbb2eb3f0b782447cc.setIcon(icon_21d90db37cf948aa6d7c794497a5ad24);
+            
+    
+            var marker_d6db757dd2e43fa6e058692bda2b6362 = L.marker(
+                [42.8083627, -112.3782738997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_7b1daaf6bca5cc9b66fad357a5add3cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b8f510a8205cdaacc20b0d14aca5958 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_26bd637faa5293c0a864edd78558970a = $(`<div id="html_26bd637faa5293c0a864edd78558970a" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/484575169/medium.jpeg" class="card-img-top" alt="golden currant">       <div class="card-body">         <h5 class="card-title">golden currant</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Ribes aureum</em></h6>         <a href="https://www.inaturalist.org/observations/269504196" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_2b8f510a8205cdaacc20b0d14aca5958.setContent(html_26bd637faa5293c0a864edd78558970a);
+            
+        
+
+        marker_d6db757dd2e43fa6e058692bda2b6362.bindPopup(popup_2b8f510a8205cdaacc20b0d14aca5958)
+        ;
+
+        
+    
+    
+                marker_d6db757dd2e43fa6e058692bda2b6362.setIcon(icon_7b1daaf6bca5cc9b66fad357a5add3cd);
+            
+    
+            var marker_5e830ec0985cb85f8a925de966e7ecb4 = L.marker(
+                [42.8039231997, -112.3735424],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_91bbfe552748acf07dbd176487f91e9a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0e9f0e025bab8c2958628d3080351f09 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1e50e88ec8c4605958e569e16f351d1b = $(`<div id="html_1e50e88ec8c4605958e569e16f351d1b" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/447215700/medium.jpeg" class="card-img-top" alt="Carrotleaf Biscuitroot">       <div class="card-body">         <h5 class="card-title">Carrotleaf Biscuitroot</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Lomatium multifidum</em></h6>         <a href="https://www.inaturalist.org/observations/250100839" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_0e9f0e025bab8c2958628d3080351f09.setContent(html_1e50e88ec8c4605958e569e16f351d1b);
+            
+        
+
+        marker_5e830ec0985cb85f8a925de966e7ecb4.bindPopup(popup_0e9f0e025bab8c2958628d3080351f09)
+        ;
+
+        
+    
+    
+                marker_5e830ec0985cb85f8a925de966e7ecb4.setIcon(icon_91bbfe552748acf07dbd176487f91e9a);
+            
+    
+            var marker_783a567cd58839ef77815897b0700080 = L.marker(
+                [42.8038015997, -112.3736447997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_f56d4e5ae77e95449b19a14a7f971257 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0e6ef9b737440072b0381dde23be2aca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_804849015f0c35efa5bff17918812a26 = $(`<div id="html_804849015f0c35efa5bff17918812a26" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/447216026/medium.jpeg" class="card-img-top" alt="Wand Mullein">       <div class="card-body">         <h5 class="card-title">Wand Mullein</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Verbascum virgatum</em></h6>         <a href="https://www.inaturalist.org/observations/250101019" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_0e6ef9b737440072b0381dde23be2aca.setContent(html_804849015f0c35efa5bff17918812a26);
+            
+        
+
+        marker_783a567cd58839ef77815897b0700080.bindPopup(popup_0e6ef9b737440072b0381dde23be2aca)
+        ;
+
+        
+    
+    
+                marker_783a567cd58839ef77815897b0700080.setIcon(icon_f56d4e5ae77e95449b19a14a7f971257);
+            
+    
+            var marker_9dc0a4acaf8a097b95b55e0335978387 = L.marker(
+                [42.80531273, -112.3759903],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_8eb190c243d45a0825dbc605860f03ad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77227725c3a621f79ff29585b54801f6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_afa2b5d974ef372e02466402405715a4 = $(`<div id="html_afa2b5d974ef372e02466402405715a4" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438703261/medium.jpeg" class="card-img-top" alt="Narrowleaf Willow">       <div class="card-body">         <h5 class="card-title">Narrowleaf Willow</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Salix exigua</em></h6>         <a href="https://www.inaturalist.org/observations/245580413" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_77227725c3a621f79ff29585b54801f6.setContent(html_afa2b5d974ef372e02466402405715a4);
+            
+        
+
+        marker_9dc0a4acaf8a097b95b55e0335978387.bindPopup(popup_77227725c3a621f79ff29585b54801f6)
+        ;
+
+        
+    
+    
+                marker_9dc0a4acaf8a097b95b55e0335978387.setIcon(icon_8eb190c243d45a0825dbc605860f03ad);
+            
+    
+            var marker_19669be86cccd377a678a6aff7704b5e = L.marker(
+                [42.8058963, -112.3759972997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_a88d85feb90939dbf521b4ccca7b6e16 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5e2a288efcf2c8f58b3785071c45ad22 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_974d2d2f3e1a4864e400093762d9eef1 = $(`<div id="html_974d2d2f3e1a4864e400093762d9eef1" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438253691/medium.jpeg" class="card-img-top" alt="Fourwing Saltbush">       <div class="card-body">         <h5 class="card-title">Fourwing Saltbush</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Atriplex canescens</em></h6>         <a href="https://www.inaturalist.org/observations/245579439" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_5e2a288efcf2c8f58b3785071c45ad22.setContent(html_974d2d2f3e1a4864e400093762d9eef1);
+            
+        
+
+        marker_19669be86cccd377a678a6aff7704b5e.bindPopup(popup_5e2a288efcf2c8f58b3785071c45ad22)
+        ;
+
+        
+    
+    
+                marker_19669be86cccd377a678a6aff7704b5e.setIcon(icon_a88d85feb90939dbf521b4ccca7b6e16);
+            
+    
+            var marker_ec98519b026e64fd6e28c26321a3bd97 = L.marker(
+                [42.810572, -112.3811306997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_7060f1856d730247f3bc18471fba6fbe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ffccbff556178dc50f85d8dd84bfcbc2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9c7b5f22ad0cff28d4ba5c7147cb22ae = $(`<div id="html_9c7b5f22ad0cff28d4ba5c7147cb22ae" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438244385/medium.jpeg" class="card-img-top" alt="Rush Skeletonweed">       <div class="card-body">         <h5 class="card-title">Rush Skeletonweed</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Chondrilla juncea</em></h6>         <a href="https://www.inaturalist.org/observations/245574496" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_ffccbff556178dc50f85d8dd84bfcbc2.setContent(html_9c7b5f22ad0cff28d4ba5c7147cb22ae);
+            
+        
+
+        marker_ec98519b026e64fd6e28c26321a3bd97.bindPopup(popup_ffccbff556178dc50f85d8dd84bfcbc2)
+        ;
+
+        
+    
+    
+                marker_ec98519b026e64fd6e28c26321a3bd97.setIcon(icon_7060f1856d730247f3bc18471fba6fbe);
+            
+    
+            var marker_f324d0f6a6a69b10c55588308c9aa3d8 = L.marker(
+                [42.81039858, -112.38193992],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_c885a7cedf62043a9ec1113059ecf79c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fdb5e80765527606de83b8294d83ae3c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0b5af9be73ac0c23e463b504f9ef6ca8 = $(`<div id="html_0b5af9be73ac0c23e463b504f9ef6ca8" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438244000/medium.jpeg" class="card-img-top" alt="Tamarix chinensis">       <div class="card-body">         <h5 class="card-title">Tamarix chinensis</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Tamarix chinensis</em></h6>         <a href="https://www.inaturalist.org/observations/245573881" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_fdb5e80765527606de83b8294d83ae3c.setContent(html_0b5af9be73ac0c23e463b504f9ef6ca8);
+            
+        
+
+        marker_f324d0f6a6a69b10c55588308c9aa3d8.bindPopup(popup_fdb5e80765527606de83b8294d83ae3c)
+        ;
+
+        
+    
+    
+                marker_f324d0f6a6a69b10c55588308c9aa3d8.setIcon(icon_c885a7cedf62043a9ec1113059ecf79c);
+            
+    
+            var marker_a2e880cf7ed65f7a5678eb66d7fec094 = L.marker(
+                [42.8106699, -112.38220282],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_df5ce7c9501ebe26b3ce922104e79a71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4091f14fa1b8f4029a8c5fdef164270c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b668499a94412fb362daa41bd7e32e06 = $(`<div id="html_b668499a94412fb362daa41bd7e32e06" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438242428/medium.jpeg" class="card-img-top" alt="pitseed goosefoot">       <div class="card-body">         <h5 class="card-title">pitseed goosefoot</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Chenopodium berlandieri</em></h6>         <a href="https://www.inaturalist.org/observations/245573479" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_4091f14fa1b8f4029a8c5fdef164270c.setContent(html_b668499a94412fb362daa41bd7e32e06);
+            
+        
+
+        marker_a2e880cf7ed65f7a5678eb66d7fec094.bindPopup(popup_4091f14fa1b8f4029a8c5fdef164270c)
+        ;
+
+        
+    
+    
+                marker_a2e880cf7ed65f7a5678eb66d7fec094.setIcon(icon_df5ce7c9501ebe26b3ce922104e79a71);
+            
+    
+            var marker_9fc5f62152ae79adbcdbd92ec4a30c36 = L.marker(
+                [42.81071973, -112.38215342],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_9a8df282e9b95e96a004db3c8e4dcb47 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b34171d3e541d5f394cb4a15c4514d2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_85ce6ed46d8bb4e63ae2bd0e9f76ce3b = $(`<div id="html_85ce6ed46d8bb4e63ae2bd0e9f76ce3b" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438241753/medium.jpeg" class="card-img-top" alt="creeping thistle">       <div class="card-body">         <h5 class="card-title">creeping thistle</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Cirsium arvense</em></h6>         <a href="https://www.inaturalist.org/observations/245573062" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_2b34171d3e541d5f394cb4a15c4514d2.setContent(html_85ce6ed46d8bb4e63ae2bd0e9f76ce3b);
+            
+        
+
+        marker_9fc5f62152ae79adbcdbd92ec4a30c36.bindPopup(popup_2b34171d3e541d5f394cb4a15c4514d2)
+        ;
+
+        
+    
+    
+                marker_9fc5f62152ae79adbcdbd92ec4a30c36.setIcon(icon_9a8df282e9b95e96a004db3c8e4dcb47);
+            
+    
+            var marker_9a057ebc1bbc75c115d80bc7b30bdd49 = L.marker(
+                [42.81071524, -112.38203019],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_183deace89e4e040d517c7abc941b635 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d080b79078ed73c214fb3e7bfcbec16a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d4eb4650121fadb1d536da24cdc6b45e = $(`<div id="html_d4eb4650121fadb1d536da24cdc6b45e" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438240955/medium.jpeg" class="card-img-top" alt="black henbane">       <div class="card-body">         <h5 class="card-title">black henbane</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Hyoscyamus niger</em></h6>         <a href="https://www.inaturalist.org/observations/245572691" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_d080b79078ed73c214fb3e7bfcbec16a.setContent(html_d4eb4650121fadb1d536da24cdc6b45e);
+            
+        
+
+        marker_9a057ebc1bbc75c115d80bc7b30bdd49.bindPopup(popup_d080b79078ed73c214fb3e7bfcbec16a)
+        ;
+
+        
+    
+    
+                marker_9a057ebc1bbc75c115d80bc7b30bdd49.setIcon(icon_183deace89e4e040d517c7abc941b635);
+            
+    
+            var marker_1c071b3f1273faf40da51a8ad032149f = L.marker(
+                [42.81079016, -112.38200438],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_5067607a2d141bcea3c4c37bfea8463e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd7278223ce8b24ba2821fa93cd662bd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2ce99c8caef853d87b4758aa3ee8f032 = $(`<div id="html_2ce99c8caef853d87b4758aa3ee8f032" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438240570/medium.jpeg" class="card-img-top" alt="White Sweetclover">       <div class="card-body">         <h5 class="card-title">White Sweetclover</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Melilotus albus</em></h6>         <a href="https://www.inaturalist.org/observations/245572499" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_bd7278223ce8b24ba2821fa93cd662bd.setContent(html_2ce99c8caef853d87b4758aa3ee8f032);
+            
+        
+
+        marker_1c071b3f1273faf40da51a8ad032149f.bindPopup(popup_bd7278223ce8b24ba2821fa93cd662bd)
+        ;
+
+        
+    
+    
+                marker_1c071b3f1273faf40da51a8ad032149f.setIcon(icon_5067607a2d141bcea3c4c37bfea8463e);
+            
+    
+            var marker_1dac89372a2748f2de2c37e444a522ec = L.marker(
+                [42.8107808, -112.3816831997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_0911c740c5551e8f6562678d0d8c75c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1728096fcff73b38cf2d98573b6f31d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ccb42d5711e5603b47a42777b09c98d8 = $(`<div id="html_ccb42d5711e5603b47a42777b09c98d8" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438240039/medium.jpeg" class="card-img-top" alt="chain speedwell">       <div class="card-body">         <h5 class="card-title">chain speedwell</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Veronica catenata</em></h6>         <a href="https://www.inaturalist.org/observations/245572169" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_a1728096fcff73b38cf2d98573b6f31d.setContent(html_ccb42d5711e5603b47a42777b09c98d8);
+            
+        
+
+        marker_1dac89372a2748f2de2c37e444a522ec.bindPopup(popup_a1728096fcff73b38cf2d98573b6f31d)
+        ;
+
+        
+    
+    
+                marker_1dac89372a2748f2de2c37e444a522ec.setIcon(icon_0911c740c5551e8f6562678d0d8c75c9);
+            
+    
+            var marker_0afa51d526bf5a688cf4c79713dfa6ca = L.marker(
+                [42.81066421, -112.38142813],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_bc76203e4fe39c0ebd0bdb6cf9d15eaf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93ac6c28f666e5262d4f63c1fc481e91 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e749067b1258e57dbbf8ec4cd7ff0657 = $(`<div id="html_e749067b1258e57dbbf8ec4cd7ff0657" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438238888/medium.jpeg" class="card-img-top" alt="Rosa">       <div class="card-body">         <h5 class="card-title">Rosa</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Rosa</em></h6>         <a href="https://www.inaturalist.org/observations/245570863" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_93ac6c28f666e5262d4f63c1fc481e91.setContent(html_e749067b1258e57dbbf8ec4cd7ff0657);
+            
+        
+
+        marker_0afa51d526bf5a688cf4c79713dfa6ca.bindPopup(popup_93ac6c28f666e5262d4f63c1fc481e91)
+        ;
+
+        
+    
+    
+                marker_0afa51d526bf5a688cf4c79713dfa6ca.setIcon(icon_bc76203e4fe39c0ebd0bdb6cf9d15eaf);
+            
+    
+            var marker_a1e1a923e4355f058db9ee928571d9fb = L.marker(
+                [42.81072304, -112.38112718],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_d242dce72cf53ded311ffcb17a5c90fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_37ebaeac2b7b62c818cf80ebb14a6a3d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3d541f066f34a0a49bf1c6d735aef467 = $(`<div id="html_3d541f066f34a0a49bf1c6d735aef467" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438236894/medium.jpeg" class="card-img-top" alt="Redstem Stork's-bill">       <div class="card-body">         <h5 class="card-title">Redstem Stork's-bill</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Erodium cicutarium</em></h6>         <a href="https://www.inaturalist.org/observations/245570404" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_37ebaeac2b7b62c818cf80ebb14a6a3d.setContent(html_3d541f066f34a0a49bf1c6d735aef467);
+            
+        
+
+        marker_a1e1a923e4355f058db9ee928571d9fb.bindPopup(popup_37ebaeac2b7b62c818cf80ebb14a6a3d)
+        ;
+
+        
+    
+    
+                marker_a1e1a923e4355f058db9ee928571d9fb.setIcon(icon_d242dce72cf53ded311ffcb17a5c90fa);
+            
+    
+            var marker_b9d55c8107be574b1673ef88407f5a47 = L.marker(
+                [42.81064098, -112.38112304],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_329e5672986a0020f51085e05ef50e05 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a07df0f5f83fb408b4e6004433fab6cc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_baa2509d04759118753be2c128823597 = $(`<div id="html_baa2509d04759118753be2c128823597" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438236528/medium.jpeg" class="card-img-top" alt="Star Moss">       <div class="card-body">         <h5 class="card-title">Star Moss</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Syntrichia ruralis</em></h6>         <a href="https://www.inaturalist.org/observations/245570157" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_a07df0f5f83fb408b4e6004433fab6cc.setContent(html_baa2509d04759118753be2c128823597);
+            
+        
+
+        marker_b9d55c8107be574b1673ef88407f5a47.bindPopup(popup_a07df0f5f83fb408b4e6004433fab6cc)
+        ;
+
+        
+    
+    
+                marker_b9d55c8107be574b1673ef88407f5a47.setIcon(icon_329e5672986a0020f51085e05ef50e05);
+            
+    
+            var marker_b9d480544d7fc34bad3bab1d1b27ee0e = L.marker(
+                [42.8106719722, -112.381094],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_099f957fc245a699eae8f141b1807655 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_791919613136c6246c0aeec6d230356c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5a852a400751dbe335378bc691c5e9fe = $(`<div id="html_5a852a400751dbe335378bc691c5e9fe" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438236166/medium.jpeg" class="card-img-top" alt="borage family">       <div class="card-body">         <h5 class="card-title">borage family</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Boraginaceae</em></h6>         <a href="https://www.inaturalist.org/observations/245569874" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_791919613136c6246c0aeec6d230356c.setContent(html_5a852a400751dbe335378bc691c5e9fe);
+            
+        
+
+        marker_b9d480544d7fc34bad3bab1d1b27ee0e.bindPopup(popup_791919613136c6246c0aeec6d230356c)
+        ;
+
+        
+    
+    
+                marker_b9d480544d7fc34bad3bab1d1b27ee0e.setIcon(icon_099f957fc245a699eae8f141b1807655);
+            
+    
+            var marker_f86e3651b959023439e12809ffda92c4 = L.marker(
+                [42.81057259, -112.38089749],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_bcf2b20e3939d309544d10282ee00629 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a3642cc90f99e6b8cf106249267c8940 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d1325f4d30ea84d3409419f62d1313bd = $(`<div id="html_d1325f4d30ea84d3409419f62d1313bd" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438234067/medium.jpeg" class="card-img-top" alt="Rubber Rabbitbrush">       <div class="card-body">         <h5 class="card-title">Rubber Rabbitbrush</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Ericameria nauseosa</em></h6>         <a href="https://www.inaturalist.org/observations/245568837" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_a3642cc90f99e6b8cf106249267c8940.setContent(html_d1325f4d30ea84d3409419f62d1313bd);
+            
+        
+
+        marker_f86e3651b959023439e12809ffda92c4.bindPopup(popup_a3642cc90f99e6b8cf106249267c8940)
+        ;
+
+        
+    
+    
+                marker_f86e3651b959023439e12809ffda92c4.setIcon(icon_bcf2b20e3939d309544d10282ee00629);
+            
+    
+            var marker_ee2ca1ea7548ee649e817812f778c242 = L.marker(
+                [42.81055634, -112.38090233],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_12c1cd61ebb188bed1fada7a30b3a9af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6cee3b454610598b8be6fd868f720169 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d7be9bad7cef29b15b8db3b28b4cde3a = $(`<div id="html_d7be9bad7cef29b15b8db3b28b4cde3a" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438233838/medium.jpeg" class="card-img-top" alt="Skunkbush Sumac">       <div class="card-body">         <h5 class="card-title">Skunkbush Sumac</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Rhus trilobata</em></h6>         <a href="https://www.inaturalist.org/observations/245568729" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_6cee3b454610598b8be6fd868f720169.setContent(html_d7be9bad7cef29b15b8db3b28b4cde3a);
+            
+        
+
+        marker_ee2ca1ea7548ee649e817812f778c242.bindPopup(popup_6cee3b454610598b8be6fd868f720169)
+        ;
+
+        
+    
+    
+                marker_ee2ca1ea7548ee649e817812f778c242.setIcon(icon_12c1cd61ebb188bed1fada7a30b3a9af);
+            
+    
+            var marker_2ae6ce47395a12914053467828e15153 = L.marker(
+                [42.81055975, -112.38091583],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_35c74708adefa70eb2be3b34f4c7bd64 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a1d35eb54c91df429ff7cb49d44ea64 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1d69bf534a920daf8fc2b02998093474 = $(`<div id="html_1d69bf534a920daf8fc2b02998093474" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438233633/medium.jpeg" class="card-img-top" alt="musk thistle">       <div class="card-body">         <h5 class="card-title">musk thistle</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Carduus nutans</em></h6>         <a href="https://www.inaturalist.org/observations/245568617" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_3a1d35eb54c91df429ff7cb49d44ea64.setContent(html_1d69bf534a920daf8fc2b02998093474);
+            
+        
+
+        marker_2ae6ce47395a12914053467828e15153.bindPopup(popup_3a1d35eb54c91df429ff7cb49d44ea64)
+        ;
+
+        
+    
+    
+                marker_2ae6ce47395a12914053467828e15153.setIcon(icon_35c74708adefa70eb2be3b34f4c7bd64);
+            
+    
+            var marker_edaefb7c52ad947c14624e6c7ce0cacf = L.marker(
+                [42.81044462, -112.38060515],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_81c05ba97c04d0f9c718d6229b13e1f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_186ab06f65d14466f20be9939324bd30 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b639e001936db32f79a4b59ea47e9d5 = $(`<div id="html_9b639e001936db32f79a4b59ea47e9d5" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438231912/medium.jpeg" class="card-img-top" alt="Great Basin Wildrye">       <div class="card-body">         <h5 class="card-title">Great Basin Wildrye</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Leymus cinereus</em></h6>         <a href="https://www.inaturalist.org/observations/245567863" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_186ab06f65d14466f20be9939324bd30.setContent(html_9b639e001936db32f79a4b59ea47e9d5);
+            
+        
+
+        marker_edaefb7c52ad947c14624e6c7ce0cacf.bindPopup(popup_186ab06f65d14466f20be9939324bd30)
+        ;
+
+        
+    
+    
+                marker_edaefb7c52ad947c14624e6c7ce0cacf.setIcon(icon_81c05ba97c04d0f9c718d6229b13e1f0);
+            
+    
+            var marker_ad1c50b3bd289da6de75d74ce6c6d8f4 = L.marker(
+                [42.81047298, -112.38049606],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_f239acae6ab06fe2be0e1c98b9b1ffd6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_376c0f03fcd85e52e17dec2b9a5d1fea = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_54d2ce96e85bb606808ac694509af71e = $(`<div id="html_54d2ce96e85bb606808ac694509af71e" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438231637/medium.jpeg" class="card-img-top" alt="Catnip">       <div class="card-body">         <h5 class="card-title">Catnip</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Nepeta cataria</em></h6>         <a href="https://www.inaturalist.org/observations/245567692" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_376c0f03fcd85e52e17dec2b9a5d1fea.setContent(html_54d2ce96e85bb606808ac694509af71e);
+            
+        
+
+        marker_ad1c50b3bd289da6de75d74ce6c6d8f4.bindPopup(popup_376c0f03fcd85e52e17dec2b9a5d1fea)
+        ;
+
+        
+    
+    
+                marker_ad1c50b3bd289da6de75d74ce6c6d8f4.setIcon(icon_f239acae6ab06fe2be0e1c98b9b1ffd6);
+            
+    
+            var marker_c52e95df7ff30d70146453deb9d29161 = L.marker(
+                [42.81046043, -112.38045644],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_ab5891a79ca9eff4207d6879ec180c88 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c62d8bc0211e05e4654c819a01f9146 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5bd80b44f08dafb9b0bcb11f6f3e83a9 = $(`<div id="html_5bd80b44f08dafb9b0bcb11f6f3e83a9" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438231095/medium.jpeg" class="card-img-top" alt="Curlycup Gumweed">       <div class="card-body">         <h5 class="card-title">Curlycup Gumweed</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Grindelia squarrosa</em></h6>         <a href="https://www.inaturalist.org/observations/245567440" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_1c62d8bc0211e05e4654c819a01f9146.setContent(html_5bd80b44f08dafb9b0bcb11f6f3e83a9);
+            
+        
+
+        marker_c52e95df7ff30d70146453deb9d29161.bindPopup(popup_1c62d8bc0211e05e4654c819a01f9146)
+        ;
+
+        
+    
+    
+                marker_c52e95df7ff30d70146453deb9d29161.setIcon(icon_ab5891a79ca9eff4207d6879ec180c88);
+            
+    
+            var marker_27e6b5060511b0839a1ba529f472a891 = L.marker(
+                [42.81049702, -112.38037187],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_ae778eb342131f456748d1f0cc8e781b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_80e2a167e18058cc9d35ec5696b4a7a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e3be5283a44788426f92b00311e2f8a2 = $(`<div id="html_e3be5283a44788426f92b00311e2f8a2" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438230410/medium.jpeg" class="card-img-top" alt="flixweed">       <div class="card-body">         <h5 class="card-title">flixweed</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Descurainia sophia</em></h6>         <a href="https://www.inaturalist.org/observations/245567080" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_80e2a167e18058cc9d35ec5696b4a7a9.setContent(html_e3be5283a44788426f92b00311e2f8a2);
+            
+        
+
+        marker_27e6b5060511b0839a1ba529f472a891.bindPopup(popup_80e2a167e18058cc9d35ec5696b4a7a9)
+        ;
+
+        
+    
+    
+                marker_27e6b5060511b0839a1ba529f472a891.setIcon(icon_ae778eb342131f456748d1f0cc8e781b);
+            
+    
+            var marker_db25d621391f6afcc04bae9b9b95c489 = L.marker(
+                [42.8104512, -112.38016],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_c5b2ba916daae7c56af58910993d8efb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8622c0db0edd9f04c9a0f6aad4217c1c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1700facf9f34c7884704f4bfbca25f66 = $(`<div id="html_1700facf9f34c7884704f4bfbca25f66" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438230001/medium.jpeg" class="card-img-top" alt="smotherweeds">       <div class="card-body">         <h5 class="card-title">smotherweeds</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Bassia</em></h6>         <a href="https://www.inaturalist.org/observations/245566829" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_8622c0db0edd9f04c9a0f6aad4217c1c.setContent(html_1700facf9f34c7884704f4bfbca25f66);
+            
+        
+
+        marker_db25d621391f6afcc04bae9b9b95c489.bindPopup(popup_8622c0db0edd9f04c9a0f6aad4217c1c)
+        ;
+
+        
+    
+    
+                marker_db25d621391f6afcc04bae9b9b95c489.setIcon(icon_c5b2ba916daae7c56af58910993d8efb);
+            
+    
+            var marker_2960a5ec2b5d4f1788881e93ac05e210 = L.marker(
+                [42.810408, -112.380127],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_fbf0ba6c935a671202f4c91a5a4760b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7889e825c82d0219d7c00d6bd32e105d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_80548fdeb6502e4144f1ca1ada650388 = $(`<div id="html_80548fdeb6502e4144f1ca1ada650388" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438228620/medium.jpeg" class="card-img-top" alt="Tall Tumblemustard">       <div class="card-body">         <h5 class="card-title">Tall Tumblemustard</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Sisymbrium altissimum</em></h6>         <a href="https://www.inaturalist.org/observations/245566011" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_7889e825c82d0219d7c00d6bd32e105d.setContent(html_80548fdeb6502e4144f1ca1ada650388);
+            
+        
+
+        marker_2960a5ec2b5d4f1788881e93ac05e210.bindPopup(popup_7889e825c82d0219d7c00d6bd32e105d)
+        ;
+
+        
+    
+    
+                marker_2960a5ec2b5d4f1788881e93ac05e210.setIcon(icon_fbf0ba6c935a671202f4c91a5a4760b7);
+            
+    
+            var marker_5fb39a7aa4abcd0a0dc76bbd69fea5c6 = L.marker(
+                [42.81038279, -112.38012103],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_063ffee1cfd704f1536d9e024c07c6f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2602ce83d083b601671ff5be5457a1d8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b511a15c9cd818c77bf2bc2e967ae834 = $(`<div id="html_b511a15c9cd818c77bf2bc2e967ae834" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438227992/medium.jpeg" class="card-img-top" alt="Eastern White-bryony">       <div class="card-body">         <h5 class="card-title">Eastern White-bryony</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Bryonia alba</em></h6>         <a href="https://www.inaturalist.org/observations/245565692" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_2602ce83d083b601671ff5be5457a1d8.setContent(html_b511a15c9cd818c77bf2bc2e967ae834);
+            
+        
+
+        marker_5fb39a7aa4abcd0a0dc76bbd69fea5c6.bindPopup(popup_2602ce83d083b601671ff5be5457a1d8)
+        ;
+
+        
+    
+    
+                marker_5fb39a7aa4abcd0a0dc76bbd69fea5c6.setIcon(icon_063ffee1cfd704f1536d9e024c07c6f9);
+            
+    
+            var marker_45ad2e2dbed676f57a7452ddbf94ed48 = L.marker(
+                [42.8104224, -112.3801088],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_c194a6224cd93c8a74e74c254620ef97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d81937b7d015201fc79c8d7c99d21468 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b038c3dcc0d7e3d3211c65c86442c038 = $(`<div id="html_b038c3dcc0d7e3d3211c65c86442c038" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438227839/medium.jpeg" class="card-img-top" alt="hound's-tongue">       <div class="card-body">         <h5 class="card-title">hound's-tongue</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Cynoglossum officinale</em></h6>         <a href="https://www.inaturalist.org/observations/245565598" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_d81937b7d015201fc79c8d7c99d21468.setContent(html_b038c3dcc0d7e3d3211c65c86442c038);
+            
+        
+
+        marker_45ad2e2dbed676f57a7452ddbf94ed48.bindPopup(popup_d81937b7d015201fc79c8d7c99d21468)
+        ;
+
+        
+    
+    
+                marker_45ad2e2dbed676f57a7452ddbf94ed48.setIcon(icon_c194a6224cd93c8a74e74c254620ef97);
+            
+    
+            var marker_4047e8d6fefa3261f13bfed639d2b901 = L.marker(
+                [42.8086189341, -112.380145965],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_4fb6fef630873ff121cb29e40efb0331 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eef353a85a1992db001aa6d7f3a554ce = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c92f1e3ced9672814ea902caa880ecd2 = $(`<div id="html_c92f1e3ced9672814ea902caa880ecd2" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/469118403/medium.jpg" class="card-img-top" alt="pitseed goosefoot">       <div class="card-body">         <h5 class="card-title">pitseed goosefoot</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Chenopodium berlandieri</em></h6>         <a href="https://www.inaturalist.org/observations/245573416" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_eef353a85a1992db001aa6d7f3a554ce.setContent(html_c92f1e3ced9672814ea902caa880ecd2);
+            
+        
+
+        marker_4047e8d6fefa3261f13bfed639d2b901.bindPopup(popup_eef353a85a1992db001aa6d7f3a554ce)
+        ;
+
+        
+    
+    
+                marker_4047e8d6fefa3261f13bfed639d2b901.setIcon(icon_4fb6fef630873ff121cb29e40efb0331);
+            
+    
+            var marker_46ee4be32b0da37be98db1e9aa723507 = L.marker(
+                [42.810358, -112.380058],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_2f0b3fcba42492e94f371747cb2e55d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a304cda06f5e5dd36722dfd6547d245b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6640767eec1a8e0722f29bef93f9fec0 = $(`<div id="html_6640767eec1a8e0722f29bef93f9fec0" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/438226832/medium.jpeg" class="card-img-top" alt="Prickly Russian Thistle">       <div class="card-body">         <h5 class="card-title">Prickly Russian Thistle</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Salsola tragus</em></h6>         <a href="https://www.inaturalist.org/observations/245564988" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_a304cda06f5e5dd36722dfd6547d245b.setContent(html_6640767eec1a8e0722f29bef93f9fec0);
+            
+        
+
+        marker_46ee4be32b0da37be98db1e9aa723507.bindPopup(popup_a304cda06f5e5dd36722dfd6547d245b)
+        ;
+
+        
+    
+    
+                marker_46ee4be32b0da37be98db1e9aa723507.setIcon(icon_2f0b3fcba42492e94f371747cb2e55d9);
+            
+    
+            var marker_51a1401441c537a55bced618c673b6c8 = L.marker(
+                [42.80865, -112.3778216667],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_1d12a4ab0e025c55d8c9b6ee90037b12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ef6c58173a6765a1a502362b4664fff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b999ef295b7e14168506f0efc77bfd32 = $(`<div id="html_b999ef295b7e14168506f0efc77bfd32" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/437767552/medium.jpeg" class="card-img-top" alt="Wand Mullein">       <div class="card-body">         <h5 class="card-title">Wand Mullein</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Verbascum virgatum</em></h6>         <a href="https://www.inaturalist.org/observations/245333489" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_7ef6c58173a6765a1a502362b4664fff.setContent(html_b999ef295b7e14168506f0efc77bfd32);
+            
+        
+
+        marker_51a1401441c537a55bced618c673b6c8.bindPopup(popup_7ef6c58173a6765a1a502362b4664fff)
+        ;
+
+        
+    
+    
+                marker_51a1401441c537a55bced618c673b6c8.setIcon(icon_1d12a4ab0e025c55d8c9b6ee90037b12);
+            
+    
+            var marker_0c984b2cc69fe08607751432a19f46b8 = L.marker(
+                [42.8105133333, -112.3791283333],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_d9c4098e53aae60b81788bd180ffd9e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed1df6e2ca8e1284e2da0f4aff40aa37 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ef77eb9119f4e5632cd9384b5f7e82da = $(`<div id="html_ef77eb9119f4e5632cd9384b5f7e82da" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/437391986/medium.jpeg" class="card-img-top" alt="Giant Blazingstar">       <div class="card-body">         <h5 class="card-title">Giant Blazingstar</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Mentzelia laevicaulis</em></h6>         <a href="https://www.inaturalist.org/observations/245142459" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_ed1df6e2ca8e1284e2da0f4aff40aa37.setContent(html_ef77eb9119f4e5632cd9384b5f7e82da);
+            
+        
+
+        marker_0c984b2cc69fe08607751432a19f46b8.bindPopup(popup_ed1df6e2ca8e1284e2da0f4aff40aa37)
+        ;
+
+        
+    
+    
+                marker_0c984b2cc69fe08607751432a19f46b8.setIcon(icon_d9c4098e53aae60b81788bd180ffd9e4);
+            
+    
+            var marker_3e7b8bdc2a95ec68b528e9787feb45fb = L.marker(
+                [42.8059083333, -112.376305],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_7d80237c7e1cece8f6a0067382e8fbe7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d5373d456426e11fbb0efba93242df2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_11dfcf1ac6da75fc7848a55fd30196cd = $(`<div id="html_11dfcf1ac6da75fc7848a55fd30196cd" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/437768718/medium.jpeg" class="card-img-top" alt="Rocky Mountain Beeplant">       <div class="card-body">         <h5 class="card-title">Rocky Mountain Beeplant</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Cleomella serrulata</em></h6>         <a href="https://www.inaturalist.org/observations/245334073" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_7d5373d456426e11fbb0efba93242df2.setContent(html_11dfcf1ac6da75fc7848a55fd30196cd);
+            
+        
+
+        marker_3e7b8bdc2a95ec68b528e9787feb45fb.bindPopup(popup_7d5373d456426e11fbb0efba93242df2)
+        ;
+
+        
+    
+    
+                marker_3e7b8bdc2a95ec68b528e9787feb45fb.setIcon(icon_7d80237c7e1cece8f6a0067382e8fbe7);
+            
+    
+            var marker_47c52ebe4ceb4e2b6e912918cf551ea0 = L.marker(
+                [42.80367, -112.3738783333],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_562e608f3208e234a642808eff548942 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ac1a875a8b54e68176d5ff8f7ff1f7d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_44fd28455ab1478f254d4069ceb317ea = $(`<div id="html_44fd28455ab1478f254d4069ceb317ea" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450485616/medium.jpeg" class="card-img-top" alt="mustard family">       <div class="card-body">         <h5 class="card-title">mustard family</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Brassicaceae</em></h6>         <a href="https://www.inaturalist.org/observations/251733819" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_3ac1a875a8b54e68176d5ff8f7ff1f7d.setContent(html_44fd28455ab1478f254d4069ceb317ea);
+            
+        
+
+        marker_47c52ebe4ceb4e2b6e912918cf551ea0.bindPopup(popup_3ac1a875a8b54e68176d5ff8f7ff1f7d)
+        ;
+
+        
+    
+    
+                marker_47c52ebe4ceb4e2b6e912918cf551ea0.setIcon(icon_562e608f3208e234a642808eff548942);
+            
+    
+            var marker_ca74d507986cd7d7d8f114f02bf86afa = L.marker(
+                [42.8015216667, -112.369605],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_ea849b0c4591aa019c9af8609c3d7787 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1e1c6ef5be0adb8ee3c7d223a6249e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3ac874d7e54f92d4cdae83a3cbec0e7b = $(`<div id="html_3ac874d7e54f92d4cdae83a3cbec0e7b" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450485846/medium.jpeg" class="card-img-top" alt="spreading fleabane">       <div class="card-body">         <h5 class="card-title">spreading fleabane</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Erigeron divergens</em></h6>         <a href="https://www.inaturalist.org/observations/251734015" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_a1e1c6ef5be0adb8ee3c7d223a6249e2.setContent(html_3ac874d7e54f92d4cdae83a3cbec0e7b);
+            
+        
+
+        marker_ca74d507986cd7d7d8f114f02bf86afa.bindPopup(popup_a1e1c6ef5be0adb8ee3c7d223a6249e2)
+        ;
+
+        
+    
+    
+                marker_ca74d507986cd7d7d8f114f02bf86afa.setIcon(icon_ea849b0c4591aa019c9af8609c3d7787);
+            
+    
+            var marker_9db475f3adf2a4040ae09c8404983386 = L.marker(
+                [42.80163, -112.3716883333],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_16eed037392b766dd64585be4b85e11b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3fc6659ea582e4fc946d7db2232be0d3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7d52153ba681c57ff495220fad79dd5 = $(`<div id="html_f7d52153ba681c57ff495220fad79dd5" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450486023/medium.jpeg" class="card-img-top" alt="Marsh elders">       <div class="card-body">         <h5 class="card-title">Marsh elders</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Iva</em></h6>         <a href="https://www.inaturalist.org/observations/251734074" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_3fc6659ea582e4fc946d7db2232be0d3.setContent(html_f7d52153ba681c57ff495220fad79dd5);
+            
+        
+
+        marker_9db475f3adf2a4040ae09c8404983386.bindPopup(popup_3fc6659ea582e4fc946d7db2232be0d3)
+        ;
+
+        
+    
+    
+                marker_9db475f3adf2a4040ae09c8404983386.setIcon(icon_16eed037392b766dd64585be4b85e11b);
+            
+    
+            var marker_09d6369f2d6560822c58d93969d28e59 = L.marker(
+                [42.8020883333, -112.3722216667],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_16982f49ed85a7c28570aaec8bd1cb78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cccbef2990f278accdeae5b6871dc2ab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41db30a60ee03c5f7de2681f002aa3ac = $(`<div id="html_41db30a60ee03c5f7de2681f002aa3ac" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450486308/medium.jpeg" class="card-img-top" alt="Silver Wormwood">       <div class="card-body">         <h5 class="card-title">Silver Wormwood</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Artemisia ludoviciana</em></h6>         <a href="https://www.inaturalist.org/observations/251734116" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_cccbef2990f278accdeae5b6871dc2ab.setContent(html_41db30a60ee03c5f7de2681f002aa3ac);
+            
+        
+
+        marker_09d6369f2d6560822c58d93969d28e59.bindPopup(popup_cccbef2990f278accdeae5b6871dc2ab)
+        ;
+
+        
+    
+    
+                marker_09d6369f2d6560822c58d93969d28e59.setIcon(icon_16982f49ed85a7c28570aaec8bd1cb78);
+            
+    
+            var marker_ab0f8fe2822229c738d11fe4603df6e0 = L.marker(
+                [42.8020883333, -112.3722216667],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_7b0503bb5cdd8c0512a906d99c6c7fb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e98b0c72a9375ff012338cead1145e65 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3c721f9814b68096db68949c65e354cc = $(`<div id="html_3c721f9814b68096db68949c65e354cc" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/437768278/medium.jpeg" class="card-img-top" alt="None">       <div class="card-body">         <h5 class="card-title">None</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Artemisia ludoviciana ludoviciana</em></h6>         <a href="https://www.inaturalist.org/observations/245333774" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_e98b0c72a9375ff012338cead1145e65.setContent(html_3c721f9814b68096db68949c65e354cc);
+            
+        
+
+        marker_ab0f8fe2822229c738d11fe4603df6e0.bindPopup(popup_e98b0c72a9375ff012338cead1145e65)
+        ;
+
+        
+    
+    
+                marker_ab0f8fe2822229c738d11fe4603df6e0.setIcon(icon_7b0503bb5cdd8c0512a906d99c6c7fb6);
+            
+    
+            var marker_92ff203f1e5b600a6d82bf2ac5a7bc27 = L.marker(
+                [42.8029133333, -112.3730166667],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_bdc5ba4ca0ac12f55b21beedc9e437ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a2f5670db66b00dd81a1bc1ecdb680d5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_76870141086a3df8ec2399b688026376 = $(`<div id="html_76870141086a3df8ec2399b688026376" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450486331/medium.jpeg" class="card-img-top" alt="golden currant">       <div class="card-body">         <h5 class="card-title">golden currant</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Ribes aureum</em></h6>         <a href="https://www.inaturalist.org/observations/251734176" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_a2f5670db66b00dd81a1bc1ecdb680d5.setContent(html_76870141086a3df8ec2399b688026376);
+            
+        
+
+        marker_92ff203f1e5b600a6d82bf2ac5a7bc27.bindPopup(popup_a2f5670db66b00dd81a1bc1ecdb680d5)
+        ;
+
+        
+    
+    
+                marker_92ff203f1e5b600a6d82bf2ac5a7bc27.setIcon(icon_bdc5ba4ca0ac12f55b21beedc9e437ab);
+            
+    
+            var marker_0c63dc380c28ed58fc8ebc8570e15872 = L.marker(
+                [42.8028716667, -112.37348],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_c97dd96db2d5c8355151c025d2d3a320 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c091e8c644cddce625885d6de5a656c4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d6394715ecfd6e0840a1e99200be1519 = $(`<div id="html_d6394715ecfd6e0840a1e99200be1519" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/437767937/medium.jpeg" class="card-img-top" alt="Western White Clematis">       <div class="card-body">         <h5 class="card-title">Western White Clematis</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Clematis ligusticifolia</em></h6>         <a href="https://www.inaturalist.org/observations/245333607" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_c091e8c644cddce625885d6de5a656c4.setContent(html_d6394715ecfd6e0840a1e99200be1519);
+            
+        
+
+        marker_0c63dc380c28ed58fc8ebc8570e15872.bindPopup(popup_c091e8c644cddce625885d6de5a656c4)
+        ;
+
+        
+    
+    
+                marker_0c63dc380c28ed58fc8ebc8570e15872.setIcon(icon_c97dd96db2d5c8355151c025d2d3a320);
+            
+    
+            var marker_877694ac16fffca2ad3523263ccc3fa4 = L.marker(
+                [42.8034633333, -112.3741216667],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_c0d8a3e52de3a29c0951674766c3f360 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a1b8c33294b1a6efed557646c595d17 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8baf58ef64b3b3a839c9eefae37ca410 = $(`<div id="html_8baf58ef64b3b3a839c9eefae37ca410" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450486425/medium.jpeg" class="card-img-top" alt="Bigbract Verbena">       <div class="card-body">         <h5 class="card-title">Bigbract Verbena</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Verbena bracteata</em></h6>         <a href="https://www.inaturalist.org/observations/251734235" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_6a1b8c33294b1a6efed557646c595d17.setContent(html_8baf58ef64b3b3a839c9eefae37ca410);
+            
+        
+
+        marker_877694ac16fffca2ad3523263ccc3fa4.bindPopup(popup_6a1b8c33294b1a6efed557646c595d17)
+        ;
+
+        
+    
+    
+                marker_877694ac16fffca2ad3523263ccc3fa4.setIcon(icon_c0d8a3e52de3a29c0951674766c3f360);
+            
+    
+            var marker_089ecf2cc55aab67f72f9ea15390ca9f = L.marker(
+                [42.804705, -112.374895],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_7c9b6133358eb1641f60a21b9563555e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed1e17d4eeb62aab1003c44052e1697e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c7043eca8043350cc05b915d5281f662 = $(`<div id="html_c7043eca8043350cc05b915d5281f662" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450486659/medium.jpeg" class="card-img-top" alt="Fourwing Saltbush">       <div class="card-body">         <h5 class="card-title">Fourwing Saltbush</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Atriplex canescens</em></h6>         <a href="https://www.inaturalist.org/observations/251734336" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_ed1e17d4eeb62aab1003c44052e1697e.setContent(html_c7043eca8043350cc05b915d5281f662);
+            
+        
+
+        marker_089ecf2cc55aab67f72f9ea15390ca9f.bindPopup(popup_ed1e17d4eeb62aab1003c44052e1697e)
+        ;
+
+        
+    
+    
+                marker_089ecf2cc55aab67f72f9ea15390ca9f.setIcon(icon_7c9b6133358eb1641f60a21b9563555e);
+            
+    
+            var marker_b8249e0d383691b354403253856a143d = L.marker(
+                [42.80912, -112.3818966667],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_b806637220429d00259369c897f63a30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64141c1b6e3fcadeaf7f7e5087ecde6a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34128e716af7c13041ec3c0f88b0ccf3 = $(`<div id="html_34128e716af7c13041ec3c0f88b0ccf3" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450486791/medium.jpeg" class="card-img-top" alt="horseweed">       <div class="card-body">         <h5 class="card-title">horseweed</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Erigeron canadensis</em></h6>         <a href="https://www.inaturalist.org/observations/251734422" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_64141c1b6e3fcadeaf7f7e5087ecde6a.setContent(html_34128e716af7c13041ec3c0f88b0ccf3);
+            
+        
+
+        marker_b8249e0d383691b354403253856a143d.bindPopup(popup_64141c1b6e3fcadeaf7f7e5087ecde6a)
+        ;
+
+        
+    
+    
+                marker_b8249e0d383691b354403253856a143d.setIcon(icon_b806637220429d00259369c897f63a30);
+            
+    
+            var marker_a57e9f4118a4839db24c3aba1e1909ba = L.marker(
+                [42.8095966667, -112.3821033333],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_4a28a2dc58368d582fc4957888eff805 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_76e777c43ce83e0fe6b5922f3931249b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_63bb5caa5acf0d1d54a61e0d6e788fa7 = $(`<div id="html_63bb5caa5acf0d1d54a61e0d6e788fa7" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450487450/medium.jpeg" class="card-img-top" alt="Tamarisks">       <div class="card-body">         <h5 class="card-title">Tamarisks</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Tamarix ramosissima</em></h6>         <a href="https://www.inaturalist.org/observations/251734652" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_76e777c43ce83e0fe6b5922f3931249b.setContent(html_63bb5caa5acf0d1d54a61e0d6e788fa7);
+            
+        
+
+        marker_a57e9f4118a4839db24c3aba1e1909ba.bindPopup(popup_76e777c43ce83e0fe6b5922f3931249b)
+        ;
+
+        
+    
+    
+                marker_a57e9f4118a4839db24c3aba1e1909ba.setIcon(icon_4a28a2dc58368d582fc4957888eff805);
+            
+    
+            var marker_5a87361c7d61759828a5af0cbe819be5 = L.marker(
+                [42.8095966667, -112.3821033333],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_18c011548938e4c05431267652ec4595 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47de4d0c8a0e84d2d2884f50a766a6ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_432f5dfb78b42637b344b99c6a3a43b7 = $(`<div id="html_432f5dfb78b42637b344b99c6a3a43b7" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450486909/medium.jpeg" class="card-img-top" alt="dicots">       <div class="card-body">         <h5 class="card-title">dicots</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Magnoliopsida</em></h6>         <a href="https://www.inaturalist.org/observations/251734477" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_47de4d0c8a0e84d2d2884f50a766a6ed.setContent(html_432f5dfb78b42637b344b99c6a3a43b7);
+            
+        
+
+        marker_5a87361c7d61759828a5af0cbe819be5.bindPopup(popup_47de4d0c8a0e84d2d2884f50a766a6ed)
+        ;
+
+        
+    
+    
+                marker_5a87361c7d61759828a5af0cbe819be5.setIcon(icon_18c011548938e4c05431267652ec4595);
+            
+    
+            var marker_61dccb6ad6b5e07f5be8d8f8a3839a01 = L.marker(
+                [42.8099166667, -112.38215],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_25de80aafa400bf825f001fdd9f367c1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f9eeaa1083a9efab658ca000c1ce77e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_896c2d47e3379f3f60a308dea98f570e = $(`<div id="html_896c2d47e3379f3f60a308dea98f570e" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/437768541/medium.jpeg" class="card-img-top" alt="None">       <div class="card-body">         <h5 class="card-title">None</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Potentilla</em></h6>         <a href="https://www.inaturalist.org/observations/245333964" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_4f9eeaa1083a9efab658ca000c1ce77e.setContent(html_896c2d47e3379f3f60a308dea98f570e);
+            
+        
+
+        marker_61dccb6ad6b5e07f5be8d8f8a3839a01.bindPopup(popup_4f9eeaa1083a9efab658ca000c1ce77e)
+        ;
+
+        
+    
+    
+                marker_61dccb6ad6b5e07f5be8d8f8a3839a01.setIcon(icon_25de80aafa400bf825f001fdd9f367c1);
+            
+    
+            var marker_9ba33a3ebd9ebdd60f135c1efadd7526 = L.marker(
+                [42.8099333333, -112.3823383333],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_6c6e96793c22d2e33053ee98e680734f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_70bb4e969d62551332224cb2e6f72828 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_404a3591f736d3f3bbf19cdd57af988f = $(`<div id="html_404a3591f736d3f3bbf19cdd57af988f" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/450487217/medium.jpeg" class="card-img-top" alt="red pigweed">       <div class="card-body">         <h5 class="card-title">red pigweed</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Oxybasis rubra</em></h6>         <a href="https://www.inaturalist.org/observations/251734541" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_70bb4e969d62551332224cb2e6f72828.setContent(html_404a3591f736d3f3bbf19cdd57af988f);
+            
+        
+
+        marker_9ba33a3ebd9ebdd60f135c1efadd7526.bindPopup(popup_70bb4e969d62551332224cb2e6f72828)
+        ;
+
+        
+    
+    
+                marker_9ba33a3ebd9ebdd60f135c1efadd7526.setIcon(icon_6c6e96793c22d2e33053ee98e680734f);
+            
+    
+            var marker_a211c0def53cea68922ef43532009600 = L.marker(
+                [42.8092733088, -112.3784173001],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_71845cb6fb1571662ea769fbde655f95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bbabfe91418fe38e5428d648414da971 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_784b362a780b1a2c619822497fb612a3 = $(`<div id="html_784b362a780b1a2c619822497fb612a3" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/338232818/medium.jpeg" class="card-img-top" alt="Bald Eagle">       <div class="card-body">         <h5 class="card-title">Bald Eagle</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Haliaeetus leucocephalus</em></h6>         <a href="https://www.inaturalist.org/observations/192644523" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_bbabfe91418fe38e5428d648414da971.setContent(html_784b362a780b1a2c619822497fb612a3);
+            
+        
+
+        marker_a211c0def53cea68922ef43532009600.bindPopup(popup_bbabfe91418fe38e5428d648414da971)
+        ;
+
+        
+    
+    
+                marker_a211c0def53cea68922ef43532009600.setIcon(icon_71845cb6fb1571662ea769fbde655f95);
+            
+    
+            var marker_816c00ac033e20660ade4985f4a54b9c = L.marker(
+                [42.8091920746, -112.3775721593],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_e9e8e6751f98f2b19482290ecd7cee22 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b16a7bbb23f8ffa8d5e2aa5c5ad34385 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7444bff542519ee01d4a3967b1094309 = $(`<div id="html_7444bff542519ee01d4a3967b1094309" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/316289022/medium.jpeg" class="card-img-top" alt="Bald Eagle">       <div class="card-body">         <h5 class="card-title">Bald Eagle</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Haliaeetus leucocephalus</em></h6>         <a href="https://www.inaturalist.org/observations/181499443" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_b16a7bbb23f8ffa8d5e2aa5c5ad34385.setContent(html_7444bff542519ee01d4a3967b1094309);
+            
+        
+
+        marker_816c00ac033e20660ade4985f4a54b9c.bindPopup(popup_b16a7bbb23f8ffa8d5e2aa5c5ad34385)
+        ;
+
+        
+    
+    
+                marker_816c00ac033e20660ade4985f4a54b9c.setIcon(icon_e9e8e6751f98f2b19482290ecd7cee22);
+            
+    
+            var marker_1b260c232fe15ce769b8d82ed9be4495 = L.marker(
+                [42.8056209, -112.3769131],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_ffd1d161f10816a6a2206efa3327317b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d9e25e6fff1cfc9c30117ccfe076157 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41f7c6879b56e8e995796ef3c1b2d1ee = $(`<div id="html_41f7c6879b56e8e995796ef3c1b2d1ee" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://static.inaturalist.org/photos/232132169/medium.jpeg" class="card-img-top" alt="Plains Pricklypear">       <div class="card-body">         <h5 class="card-title">Plains Pricklypear</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Opuntia polyacantha</em></h6>         <a href="https://www.inaturalist.org/observations/136045330" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_9d9e25e6fff1cfc9c30117ccfe076157.setContent(html_41f7c6879b56e8e995796ef3c1b2d1ee);
+            
+        
+
+        marker_1b260c232fe15ce769b8d82ed9be4495.bindPopup(popup_9d9e25e6fff1cfc9c30117ccfe076157)
+        ;
+
+        
+    
+    
+                marker_1b260c232fe15ce769b8d82ed9be4495.setIcon(icon_ffd1d161f10816a6a2206efa3327317b);
+            
+    
+            var marker_d67cc50379e4584535aeb942f62cef53 = L.marker(
+                [42.8056209, -112.3769131],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_eeee6f5a21720e1c829055284b455756 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b219a4bd59faf596caa5529868f3e86f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0cf66ddde608114a0478d4c948a2542e = $(`<div id="html_0cf66ddde608114a0478d4c948a2542e" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://static.inaturalist.org/photos/231763114/medium.jpeg" class="card-img-top" alt="lesser burdock">       <div class="card-body">         <h5 class="card-title">lesser burdock</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Arctium minus</em></h6>         <a href="https://www.inaturalist.org/observations/135797317" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_b219a4bd59faf596caa5529868f3e86f.setContent(html_0cf66ddde608114a0478d4c948a2542e);
+            
+        
+
+        marker_d67cc50379e4584535aeb942f62cef53.bindPopup(popup_b219a4bd59faf596caa5529868f3e86f)
+        ;
+
+        
+    
+    
+                marker_d67cc50379e4584535aeb942f62cef53.setIcon(icon_eeee6f5a21720e1c829055284b455756);
+            
+    
+            var marker_8dd84c989438953c05fdbcb80c65e718 = L.marker(
+                [42.8081655833, -112.3772696944],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_736011c5de3c550cb136d4a1c9c341b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_376b9f4d6346a0f9728175f944e475f1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_825245c5fd49139a732984332a38b14c = $(`<div id="html_825245c5fd49139a732984332a38b14c" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/146947622/medium.jpeg" class="card-img-top" alt="Nicrophorus">       <div class="card-body">         <h5 class="card-title">Nicrophorus</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Nicrophorus</em></h6>         <a href="https://www.inaturalist.org/observations/89015385" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_376b9f4d6346a0f9728175f944e475f1.setContent(html_825245c5fd49139a732984332a38b14c);
+            
+        
+
+        marker_8dd84c989438953c05fdbcb80c65e718.bindPopup(popup_376b9f4d6346a0f9728175f944e475f1)
+        ;
+
+        
+    
+    
+                marker_8dd84c989438953c05fdbcb80c65e718.setIcon(icon_736011c5de3c550cb136d4a1c9c341b4);
+            
+    
+            var marker_3be025dbbf54d472e05656b9b696d2c1 = L.marker(
+                [42.8076490833, -112.3755345],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_c4d1aabb07606cd7f359a72d51a3f242 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c248aa93e09079e87a51483a616eb17b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e0eb7c5cba52628da5a8b5c1a47e0382 = $(`<div id="html_e0eb7c5cba52628da5a8b5c1a47e0382" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/143259757/medium.jpeg" class="card-img-top" alt="common yarrow">       <div class="card-body">         <h5 class="card-title">common yarrow</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Achillea</em></h6>         <a href="https://www.inaturalist.org/observations/86912339" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_c248aa93e09079e87a51483a616eb17b.setContent(html_e0eb7c5cba52628da5a8b5c1a47e0382);
+            
+        
+
+        marker_3be025dbbf54d472e05656b9b696d2c1.bindPopup(popup_c248aa93e09079e87a51483a616eb17b)
+        ;
+
+        
+    
+    
+                marker_3be025dbbf54d472e05656b9b696d2c1.setIcon(icon_c4d1aabb07606cd7f359a72d51a3f242);
+            
+    
+            var marker_7661ce80af1b53ae43ffb19bd89878f3 = L.marker(
+                [42.8076490833, -112.3755345],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_f6427fcbdf6c9152af4e61423e5b32ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1cc667080c691791adf8cdbf8179c489 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a0fc46288ab55cc55b3c7c393f294755 = $(`<div id="html_a0fc46288ab55cc55b3c7c393f294755" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/140031413/medium.jpeg" class="card-img-top" alt="Spur Lupine">       <div class="card-body">         <h5 class="card-title">Spur Lupine</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Lupinus arbustus</em></h6>         <a href="https://www.inaturalist.org/observations/85096463" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_1cc667080c691791adf8cdbf8179c489.setContent(html_a0fc46288ab55cc55b3c7c393f294755);
+            
+        
+
+        marker_7661ce80af1b53ae43ffb19bd89878f3.bindPopup(popup_1cc667080c691791adf8cdbf8179c489)
+        ;
+
+        
+    
+    
+                marker_7661ce80af1b53ae43ffb19bd89878f3.setIcon(icon_f6427fcbdf6c9152af4e61423e5b32ef);
+            
+    
+            var marker_36abd24887c8dc54f93414cb9a12fc92 = L.marker(
+                [42.8078211944, -112.3761128889],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_0dcdd9392bd27299bdd2969270000ce2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51c6b0f6b2d419dd074163ccb868bf77 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c309355eae84091862d22053b7a87110 = $(`<div id="html_c309355eae84091862d22053b7a87110" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/139711982/medium.jpeg" class="card-img-top" alt="spreading dogbane">       <div class="card-body">         <h5 class="card-title">spreading dogbane</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Apocynum androsaemifolium</em></h6>         <a href="https://www.inaturalist.org/observations/84471684" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_51c6b0f6b2d419dd074163ccb868bf77.setContent(html_c309355eae84091862d22053b7a87110);
+            
+        
+
+        marker_36abd24887c8dc54f93414cb9a12fc92.bindPopup(popup_51c6b0f6b2d419dd074163ccb868bf77)
+        ;
+
+        
+    
+    
+                marker_36abd24887c8dc54f93414cb9a12fc92.setIcon(icon_0dcdd9392bd27299bdd2969270000ce2);
+            
+    
+            var marker_4b54f8db066992946556cca17e2b4d71 = L.marker(
+                [42.8103472222, -112.3833555556],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_e3113a9f1e7fed9937ab8ebc7ed99b54 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ab6d110725af50fe449680bd86d852b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fe067c2ceb3969d3bc0b2acf47d3cea4 = $(`<div id="html_fe067c2ceb3969d3bc0b2acf47d3cea4" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/127314215/medium.jpg" class="card-img-top" alt="Rhopalomyia hirtipomum">       <div class="card-body">         <h5 class="card-title">Rhopalomyia hirtipomum</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Rhopalomyia hirtipomum</em></h6>         <a href="https://www.inaturalist.org/observations/77841465" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_0ab6d110725af50fe449680bd86d852b.setContent(html_fe067c2ceb3969d3bc0b2acf47d3cea4);
+            
+        
+
+        marker_4b54f8db066992946556cca17e2b4d71.bindPopup(popup_0ab6d110725af50fe449680bd86d852b)
+        ;
+
+        
+    
+    
+                marker_4b54f8db066992946556cca17e2b4d71.setIcon(icon_e3113a9f1e7fed9937ab8ebc7ed99b54);
+            
+    
+            var marker_cb129ceaa5b2b66e855a40125b8d5a6e = L.marker(
+                [42.8085098889, -112.3784265],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_46804457dd4c921ef234b9c1e174adc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a2df367210960769a566b1c9ff1bed1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d1d257e869acabef86ecc08ebde81405 = $(`<div id="html_d1d257e869acabef86ecc08ebde81405" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/120319991/medium.jpeg" class="card-img-top" alt="common yarrow">       <div class="card-body">         <h5 class="card-title">common yarrow</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Achillea millefolium</em></h6>         <a href="https://www.inaturalist.org/observations/73681583" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_4a2df367210960769a566b1c9ff1bed1.setContent(html_d1d257e869acabef86ecc08ebde81405);
+            
+        
+
+        marker_cb129ceaa5b2b66e855a40125b8d5a6e.bindPopup(popup_4a2df367210960769a566b1c9ff1bed1)
+        ;
+
+        
+    
+    
+                marker_cb129ceaa5b2b66e855a40125b8d5a6e.setIcon(icon_46804457dd4c921ef234b9c1e174adc4);
+            
+    
+            var marker_cf3046c291b4aeb47c01a650ad749d2e = L.marker(
+                [42.807993, -112.3766909722],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_47f023ae347caf38e54e47f4b7a72f30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56d1dd587bf13b93c0f5b93708ebe957 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f28c3d95d1278b6450bfbc5993f50207 = $(`<div id="html_f28c3d95d1278b6450bfbc5993f50207" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/105758869/medium.jpeg" class="card-img-top" alt="spreading dogbane">       <div class="card-body">         <h5 class="card-title">spreading dogbane</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Apocynum androsaemifolium</em></h6>         <a href="https://www.inaturalist.org/observations/65683357" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_56d1dd587bf13b93c0f5b93708ebe957.setContent(html_f28c3d95d1278b6450bfbc5993f50207);
+            
+        
+
+        marker_cf3046c291b4aeb47c01a650ad749d2e.bindPopup(popup_56d1dd587bf13b93c0f5b93708ebe957)
+        ;
+
+        
+    
+    
+                marker_cf3046c291b4aeb47c01a650ad749d2e.setIcon(icon_47f023ae347caf38e54e47f4b7a72f30);
+            
+    
+            var marker_8bc0b56f67e6defef403461ed38c29be = L.marker(
+                [42.8064626, -112.3784806],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_0ff05a7086c4ae427e58b54130633896 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_718643f91e9838e76fb97554f87c897a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3c9b7ee67ffd6ba99f84e503f2b5462c = $(`<div id="html_3c9b7ee67ffd6ba99f84e503f2b5462c" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://static.inaturalist.org/photos/86949100/medium.jpeg" class="card-img-top" alt="snowberries">       <div class="card-body">         <h5 class="card-title">snowberries</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Symphoricarpos</em></h6>         <a href="https://www.inaturalist.org/observations/54637608" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_718643f91e9838e76fb97554f87c897a.setContent(html_3c9b7ee67ffd6ba99f84e503f2b5462c);
+            
+        
+
+        marker_8bc0b56f67e6defef403461ed38c29be.bindPopup(popup_718643f91e9838e76fb97554f87c897a)
+        ;
+
+        
+    
+    
+                marker_8bc0b56f67e6defef403461ed38c29be.setIcon(icon_0ff05a7086c4ae427e58b54130633896);
+            
+    
+            var marker_d68fd9bb34396c898c264c49ac89394c = L.marker(
+                [42.8071327209, -112.3794708252],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_4fdf1c338f8ccf8109a3ca68162a373d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_037aad986398c1791432c9e0aeefea66 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_14c1bf5b96cafe7191622dff9cada5a1 = $(`<div id="html_14c1bf5b96cafe7191622dff9cada5a1" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/43481035/medium.jpeg" class="card-img-top" alt="Pale agoseris">       <div class="card-body">         <h5 class="card-title">Pale agoseris</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Agoseris glauca</em></h6>         <a href="https://www.inaturalist.org/observations/27915688" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_037aad986398c1791432c9e0aeefea66.setContent(html_14c1bf5b96cafe7191622dff9cada5a1);
+            
+        
+
+        marker_d68fd9bb34396c898c264c49ac89394c.bindPopup(popup_037aad986398c1791432c9e0aeefea66)
+        ;
+
+        
+    
+    
+                marker_d68fd9bb34396c898c264c49ac89394c.setIcon(icon_4fdf1c338f8ccf8109a3ca68162a373d);
+            
+    
+            var marker_68f5411053fe4188e9a5afed2682f254 = L.marker(
+                [42.8071327209, -112.3794708252],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_2b794f50eede90d8f772a65a69c26ea9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7aec4dbbcd1ca12af4f283335fe92e85 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_18e15622cc38ecf9a3837d93c0d95430 = $(`<div id="html_18e15622cc38ecf9a3837d93c0d95430" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/43480973/medium.jpeg" class="card-img-top" alt="Nuttall's larkspur">       <div class="card-body">         <h5 class="card-title">Nuttall's larkspur</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Delphinium nuttallianum</em></h6>         <a href="https://www.inaturalist.org/observations/27915659" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_7aec4dbbcd1ca12af4f283335fe92e85.setContent(html_18e15622cc38ecf9a3837d93c0d95430);
+            
+        
+
+        marker_68f5411053fe4188e9a5afed2682f254.bindPopup(popup_7aec4dbbcd1ca12af4f283335fe92e85)
+        ;
+
+        
+    
+    
+                marker_68f5411053fe4188e9a5afed2682f254.setIcon(icon_2b794f50eede90d8f772a65a69c26ea9);
+            
+    
+            var marker_f35f3660d1acb69983596161ec1bb902 = L.marker(
+                [42.8071327209, -112.3794708252],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_f6820c07dbbc404cab7ab279bb8c133a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a8706497b4b1d161058d6e947273ee27 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34164f4e18e5a3cec69704101de735ab = $(`<div id="html_34164f4e18e5a3cec69704101de735ab" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/43480960/medium.jpeg" class="card-img-top" alt="Section Geranium">       <div class="card-body">         <h5 class="card-title">Section Geranium</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Geranium</em></h6>         <a href="https://www.inaturalist.org/observations/27915640" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_a8706497b4b1d161058d6e947273ee27.setContent(html_34164f4e18e5a3cec69704101de735ab);
+            
+        
+
+        marker_f35f3660d1acb69983596161ec1bb902.bindPopup(popup_a8706497b4b1d161058d6e947273ee27)
+        ;
+
+        
+    
+    
+                marker_f35f3660d1acb69983596161ec1bb902.setIcon(icon_f6820c07dbbc404cab7ab279bb8c133a);
+            
+    
+            var marker_32ac459b6796008d503cb318e6a05dd4 = L.marker(
+                [42.807220459, -112.3783340454],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_a7c0a1bd27d426649c333dfaeb26e7f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6a971df819f0182000bc5be58fd0276 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9363b552fa2e5856deb6c3395aa79abb = $(`<div id="html_9363b552fa2e5856deb6c3395aa79abb" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/46126351/medium.jpeg" class="card-img-top" alt="yellow salsify">       <div class="card-body">         <h5 class="card-title">yellow salsify</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Tragopogon dubius</em></h6>         <a href="https://www.inaturalist.org/observations/29551741" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_b6a971df819f0182000bc5be58fd0276.setContent(html_9363b552fa2e5856deb6c3395aa79abb);
+            
+        
+
+        marker_32ac459b6796008d503cb318e6a05dd4.bindPopup(popup_b6a971df819f0182000bc5be58fd0276)
+        ;
+
+        
+    
+    
+                marker_32ac459b6796008d503cb318e6a05dd4.setIcon(icon_a7c0a1bd27d426649c333dfaeb26e7f4);
+            
+    
+            var marker_91b4315b0e65086b8943c49e331bbefb = L.marker(
+                [42.807220459, -112.3783340454],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_e6b279342c8b646a8f3357743c204ee8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3478d265e892528f3c21c78e4247a16 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1931f3dc4a598aa514d04b8e493513ee = $(`<div id="html_1931f3dc4a598aa514d04b8e493513ee" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/46125835/medium.jpeg" class="card-img-top" alt="desert globemallow">       <div class="card-body">         <h5 class="card-title">desert globemallow</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Sphaeralcea ambigua</em></h6>         <a href="https://www.inaturalist.org/observations/29551359" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_d3478d265e892528f3c21c78e4247a16.setContent(html_1931f3dc4a598aa514d04b8e493513ee);
+            
+        
+
+        marker_91b4315b0e65086b8943c49e331bbefb.bindPopup(popup_d3478d265e892528f3c21c78e4247a16)
+        ;
+
+        
+    
+    
+                marker_91b4315b0e65086b8943c49e331bbefb.setIcon(icon_e6b279342c8b646a8f3357743c204ee8);
+            
+    
+            var marker_f2c400a3a0a1b5c1f0e95dfe67da3dc7 = L.marker(
+                [42.8066673279, -112.3761138916],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_7dcf3cd17cc7af72f1f6990ef3a4f95f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ab8cf3b80274ec6c679974288353d159 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fe990e7b4d095d9edfb48cc6f93694a5 = $(`<div id="html_fe990e7b4d095d9edfb48cc6f93694a5" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/37549191/medium.jpeg" class="card-img-top" alt="mosses">       <div class="card-body">         <h5 class="card-title">mosses</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Bryophyta</em></h6>         <a href="https://www.inaturalist.org/observations/24281434" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_ab8cf3b80274ec6c679974288353d159.setContent(html_fe990e7b4d095d9edfb48cc6f93694a5);
+            
+        
+
+        marker_f2c400a3a0a1b5c1f0e95dfe67da3dc7.bindPopup(popup_ab8cf3b80274ec6c679974288353d159)
+        ;
+
+        
+    
+    
+                marker_f2c400a3a0a1b5c1f0e95dfe67da3dc7.setIcon(icon_7dcf3cd17cc7af72f1f6990ef3a4f95f);
+            
+    
+            var marker_22152ac210aa7bde4ffe9a88b3145fcf = L.marker(
+                [42.8071707, -112.3764481],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_1cb3b16de7e2919e42643ce5c8f8a3ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_92b7c5d6d5bade57f015d48f22e3a27c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c30f23734f1084686911b0f425bacf38 = $(`<div id="html_c30f23734f1084686911b0f425bacf38" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/16970053/medium.jpeg" class="card-img-top" alt="dicots">       <div class="card-body">         <h5 class="card-title">dicots</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Magnoliopsida</em></h6>         <a href="https://www.inaturalist.org/observations/11856985" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_92b7c5d6d5bade57f015d48f22e3a27c.setContent(html_c30f23734f1084686911b0f425bacf38);
+            
+        
+
+        marker_22152ac210aa7bde4ffe9a88b3145fcf.bindPopup(popup_92b7c5d6d5bade57f015d48f22e3a27c)
+        ;
+
+        
+    
+    
+                marker_22152ac210aa7bde4ffe9a88b3145fcf.setIcon(icon_1cb3b16de7e2919e42643ce5c8f8a3ac);
+            
+    
+            var marker_da1cbeb983a3507cbd70667224ad9275 = L.marker(
+                [42.8071707, -112.3764481],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_c276f0195f05cd608c55eaf000cc473e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_80d46aca2fe0e924e7a7ae11adb7a762 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_54dfd122cc39579691d9ebca2946017e = $(`<div id="html_54dfd122cc39579691d9ebca2946017e" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/16372957/medium.jpeg" class="card-img-top" alt="monocots">       <div class="card-body">         <h5 class="card-title">monocots</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Liliopsida</em></h6>         <a href="https://www.inaturalist.org/observations/11472425" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_80d46aca2fe0e924e7a7ae11adb7a762.setContent(html_54dfd122cc39579691d9ebca2946017e);
+            
+        
+
+        marker_da1cbeb983a3507cbd70667224ad9275.bindPopup(popup_80d46aca2fe0e924e7a7ae11adb7a762)
+        ;
+
+        
+    
+    
+                marker_da1cbeb983a3507cbd70667224ad9275.setIcon(icon_c276f0195f05cd608c55eaf000cc473e);
+            
+    
+            var marker_62d62279691d0af4019781514cd8e544 = L.marker(
+                [42.8071707, -112.3764481],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_c205ca95fe726d55f2659ca1ae27a89c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a0d56859b486315da71356b3abf9cd98 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8d100e112371d2c00172b175d9a6d035 = $(`<div id="html_8d100e112371d2c00172b175d9a6d035" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/16865236/medium.jpeg" class="card-img-top" alt="red osier dogwood">       <div class="card-body">         <h5 class="card-title">red osier dogwood</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Cornus sericea</em></h6>         <a href="https://www.inaturalist.org/observations/11790974" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_a0d56859b486315da71356b3abf9cd98.setContent(html_8d100e112371d2c00172b175d9a6d035);
+            
+        
+
+        marker_62d62279691d0af4019781514cd8e544.bindPopup(popup_a0d56859b486315da71356b3abf9cd98)
+        ;
+
+        
+    
+    
+                marker_62d62279691d0af4019781514cd8e544.setIcon(icon_c205ca95fe726d55f2659ca1ae27a89c);
+            
+    
+            var marker_27768fc8aac2670f3d225848aa5500df = L.marker(
+                [42.8071707, -112.3764481],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_656306ac932868aabe4852c665cdd40f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_165c6f12573882d39b080ccd2f636533 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a1224f3f101f0a8197ab6d1c47ba6683 = $(`<div id="html_a1224f3f101f0a8197ab6d1c47ba6683" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/16315845/medium.jpeg" class="card-img-top" alt="Brown's Peony">       <div class="card-body">         <h5 class="card-title">Brown's Peony</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Paeonia brownii</em></h6>         <a href="https://www.inaturalist.org/observations/11438415" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_165c6f12573882d39b080ccd2f636533.setContent(html_a1224f3f101f0a8197ab6d1c47ba6683);
+            
+        
+
+        marker_27768fc8aac2670f3d225848aa5500df.bindPopup(popup_165c6f12573882d39b080ccd2f636533)
+        ;
+
+        
+    
+    
+                marker_27768fc8aac2670f3d225848aa5500df.setIcon(icon_656306ac932868aabe4852c665cdd40f);
+            
+    
+            var marker_3b87f95e9dac255d25ba673aa98ae9b1 = L.marker(
+                [42.8071707, -112.3764481],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_169d2255c1e90e65b0d5feda5b1ce1dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_470fad763dff52c4fd229c3f014e4101 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3b04e7dd0625b618fcbcca3fff0c3658 = $(`<div id="html_3b04e7dd0625b618fcbcca3fff0c3658" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/16315044/medium.jpeg" class="card-img-top" alt="Browse Milkvetch">       <div class="card-body">         <h5 class="card-title">Browse Milkvetch</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Astragalus cibarius</em></h6>         <a href="https://www.inaturalist.org/observations/11437940" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_470fad763dff52c4fd229c3f014e4101.setContent(html_3b04e7dd0625b618fcbcca3fff0c3658);
+            
+        
+
+        marker_3b87f95e9dac255d25ba673aa98ae9b1.bindPopup(popup_470fad763dff52c4fd229c3f014e4101)
+        ;
+
+        
+    
+    
+                marker_3b87f95e9dac255d25ba673aa98ae9b1.setIcon(icon_169d2255c1e90e65b0d5feda5b1ce1dc);
+            
+    
+            var marker_aad6dde40f2084b77954d6f174e99127 = L.marker(
+                [42.8065776, -112.375086],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_a357c44fc974e96040aed4225ca4f50a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b090246d7a9c2c93a2381144c67f30a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eba0b82c0f5111c0bf7422e0ba85cb8b = $(`<div id="html_eba0b82c0f5111c0bf7422e0ba85cb8b" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/15005136/medium.jpeg" class="card-img-top" alt="spiny phlox">       <div class="card-body">         <h5 class="card-title">spiny phlox</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Phlox hoodii</em></h6>         <a href="https://www.inaturalist.org/observations/10737248" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_1b090246d7a9c2c93a2381144c67f30a.setContent(html_eba0b82c0f5111c0bf7422e0ba85cb8b);
+            
+        
+
+        marker_aad6dde40f2084b77954d6f174e99127.bindPopup(popup_1b090246d7a9c2c93a2381144c67f30a)
+        ;
+
+        
+    
+    
+                marker_aad6dde40f2084b77954d6f174e99127.setIcon(icon_a357c44fc974e96040aed4225ca4f50a);
+            
+    
+            var marker_5bbc5adcd1e2f14da8226b4138a28396 = L.marker(
+                [42.8063143, -112.3782997],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_ea004be783b5a6b1b22d8409d11bd16a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd6684a609d3dc227797f2e1f66db82c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7148901148ac7d10a85b99953fef392 = $(`<div id="html_f7148901148ac7d10a85b99953fef392" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/10283395/medium.jpeg" class="card-img-top" alt="serviceberries">       <div class="card-body">         <h5 class="card-title">serviceberries</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Amelanchier alnifolia</em></h6>         <a href="https://www.inaturalist.org/observations/7816958" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_dd6684a609d3dc227797f2e1f66db82c.setContent(html_f7148901148ac7d10a85b99953fef392);
+            
+        
+
+        marker_5bbc5adcd1e2f14da8226b4138a28396.bindPopup(popup_dd6684a609d3dc227797f2e1f66db82c)
+        ;
+
+        
+    
+    
+                marker_5bbc5adcd1e2f14da8226b4138a28396.setIcon(icon_ea004be783b5a6b1b22d8409d11bd16a);
+            
+    
+            var marker_a065677ec1a006e559358fd400e86249 = L.marker(
+                [42.8057359, -112.3735186],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_54c6b061b44592e3cf06e82212d11c69 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85c484e2bb1b9e674ae5b9e5d74056e9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_116d28c4bf901080fb1f873395ed9bf6 = $(`<div id="html_116d28c4bf901080fb1f873395ed9bf6" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://static.inaturalist.org/photos/10280397/medium.jpeg" class="card-img-top" alt="blue elder">       <div class="card-body">         <h5 class="card-title">blue elder</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Sambucus cerulea</em></h6>         <a href="https://www.inaturalist.org/observations/7814802" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_85c484e2bb1b9e674ae5b9e5d74056e9.setContent(html_116d28c4bf901080fb1f873395ed9bf6);
+            
+        
+
+        marker_a065677ec1a006e559358fd400e86249.bindPopup(popup_85c484e2bb1b9e674ae5b9e5d74056e9)
+        ;
+
+        
+    
+    
+                marker_a065677ec1a006e559358fd400e86249.setIcon(icon_54c6b061b44592e3cf06e82212d11c69);
+            
+    
+            var marker_e7a5fe9e54bebb112250121a6bfc24cf = L.marker(
+                [42.8057359, -112.3735186],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_40b1252175a61aba08bc952aadfc13f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1e210b49c3ac27717ce42c1ba13b0ad = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cc24dd1012041b4464ed32b5338a19fe = $(`<div id="html_cc24dd1012041b4464ed32b5338a19fe" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://static.inaturalist.org/photos/10280089/medium.jpeg" class="card-img-top" alt="Utah Juniper">       <div class="card-body">         <h5 class="card-title">Utah Juniper</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Juniperus osteosperma</em></h6>         <a href="https://www.inaturalist.org/observations/7813971" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_d1e210b49c3ac27717ce42c1ba13b0ad.setContent(html_cc24dd1012041b4464ed32b5338a19fe);
+            
+        
+
+        marker_e7a5fe9e54bebb112250121a6bfc24cf.bindPopup(popup_d1e210b49c3ac27717ce42c1ba13b0ad)
+        ;
+
+        
+    
+    
+                marker_e7a5fe9e54bebb112250121a6bfc24cf.setIcon(icon_40b1252175a61aba08bc952aadfc13f2);
+            
+    
+            var marker_19244e685fee61a28de2bef6eb703f74 = L.marker(
+                [42.8057359, -112.3735186],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_02aca5555e50ed58b4f459912d3a91a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b57ebcbe46410e8edac4cb481cedb580 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f94044404853b648c1d163de8b9f413f = $(`<div id="html_f94044404853b648c1d163de8b9f413f" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://static.inaturalist.org/photos/10280017/medium.jpeg" class="card-img-top" alt="choke cherry">       <div class="card-body">         <h5 class="card-title">choke cherry</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Prunus virginiana</em></h6>         <a href="https://www.inaturalist.org/observations/7813923" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_b57ebcbe46410e8edac4cb481cedb580.setContent(html_f94044404853b648c1d163de8b9f413f);
+            
+        
+
+        marker_19244e685fee61a28de2bef6eb703f74.bindPopup(popup_b57ebcbe46410e8edac4cb481cedb580)
+        ;
+
+        
+    
+    
+                marker_19244e685fee61a28de2bef6eb703f74.setIcon(icon_02aca5555e50ed58b4f459912d3a91a2);
+            
+    
+            var marker_fc9d018f31b244979c1fb63c33450ed2 = L.marker(
+                [42.8057359, -112.3735186],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_2466aed0147021762a45c3c761e63441 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6808c7646bda314e31ac51e8f70ec89 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_49aa0662d7cf08bd5cd4fde737389b4e = $(`<div id="html_49aa0662d7cf08bd5cd4fde737389b4e" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://static.inaturalist.org/photos/10126674/medium.jpeg" class="card-img-top" alt="common sunflower">       <div class="card-body">         <h5 class="card-title">common sunflower</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Helianthus annuus</em></h6>         <a href="https://www.inaturalist.org/observations/7720134" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_b6808c7646bda314e31ac51e8f70ec89.setContent(html_49aa0662d7cf08bd5cd4fde737389b4e);
+            
+        
+
+        marker_fc9d018f31b244979c1fb63c33450ed2.bindPopup(popup_b6808c7646bda314e31ac51e8f70ec89)
+        ;
+
+        
+    
+    
+                marker_fc9d018f31b244979c1fb63c33450ed2.setIcon(icon_2466aed0147021762a45c3c761e63441);
+            
+    
+            var marker_18630a0ccd52afedff6005b8303673d0 = L.marker(
+                [42.8059234619, -112.3763656616],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_d0cf7ad145dc58cffcff8d9d4ec4eeb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10f5154c106f7352fd20db16082bf3e5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ea3624cba2f0941b3077791e0ea20d4 = $(`<div id="html_8ea3624cba2f0941b3077791e0ea20d4" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/3474640/medium.jpeg" class="card-img-top" alt="Creeping Mahonia">       <div class="card-body">         <h5 class="card-title">Creeping Mahonia</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Berberis repens</em></h6>         <a href="http://www.inaturalist.org/observations/3019467" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_10f5154c106f7352fd20db16082bf3e5.setContent(html_8ea3624cba2f0941b3077791e0ea20d4);
+            
+        
+
+        marker_18630a0ccd52afedff6005b8303673d0.bindPopup(popup_10f5154c106f7352fd20db16082bf3e5)
+        ;
+
+        
+    
+    
+                marker_18630a0ccd52afedff6005b8303673d0.setIcon(icon_d0cf7ad145dc58cffcff8d9d4ec4eeb6);
+            
+    
+            var marker_d1202e683567930124ee6a9c2876a2c0 = L.marker(
+                [42.8059234619, -112.3763656616],
+                {
+}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            var icon_d6091db0d21cfd7795ffee6a9264e1bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c8c5a0c4af0d64f66bcc06117093daa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_428b92b4474f1d1275a727d9fbd4762e = $(`<div id="html_428b92b4474f1d1275a727d9fbd4762e" style="width: 100.0%; height: 100.0%;">     <div class="card" style="width: 18rem;">       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/3436747/medium.jpeg" class="card-img-top" alt="flowering plants">       <div class="card-body">         <h5 class="card-title">flowering plants</h5>         <h6 class="card-subtitle mb-2 text-muted"><em>Angiospermae</em></h6>         <a href="http://www.inaturalist.org/observations/2988723" target="_blank" class="card-link">View on iNaturalist</a>       </div>     </div>     </div>`)[0];
+                popup_1c8c5a0c4af0d64f66bcc06117093daa.setContent(html_428b92b4474f1d1275a727d9fbd4762e);
+            
+        
+
+        marker_d1202e683567930124ee6a9c2876a2c0.bindPopup(popup_1c8c5a0c4af0d64f66bcc06117093daa)
+        ;
+
+        
+    
+    
+                marker_d1202e683567930124ee6a9c2876a2c0.setIcon(icon_d6091db0d21cfd7795ffee6a9264e1bd);
+            
+    
+            var polygon_457d9c730c420c7e26bc901771bb3594 = L.polygon(
+                [[42.81124, -112.386062], [42.799774, -112.369373], [42.80081, -112.367832], [42.810486, -112.378508], [42.81124, -112.386062]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9076f0d2705e2cba35e6494ceec2ca6c);
+        
+    
+            polygon_457d9c730c420c7e26bc901771bb3594.bindTooltip(
+                `<div>
+                     Portneuf Oxbow Restoration Area
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

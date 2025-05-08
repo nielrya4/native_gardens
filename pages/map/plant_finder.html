@@ -95,9 +95,18 @@
                     <div>Loading data...</div>
                 </div>
             </div>
+            <div id="legend" class="leaflet-control leaflet-bar leaflet-bottom leaflet-right">
+                <b>Mean Annual Extreme Low Temperature (F)</b><br>
+                <i style="background:rgba(0, 0, 255, 0.5); width: 20px; height: 20px; display: inline-block;"></i> &nbsp; -20 and below<br>
+                <i style="background:rgb(0,255,199); width: 20px; height: 20px; display: inline-block;"></i> &nbsp; -20 to -10<br>
+                <i style="background:rgba(255,220,0,0.96); width: 20px; height: 20px; display: inline-block;"></i> &nbsp; -10 to -5<br>
+                <i style="background:rgba(255,122,16,0.94); width: 20px; height: 20px; display: inline-block;"></i> &nbsp; -5 to 5<br>
+                <i style="background:rgba(205,21,49,0.7); width: 20px; height: 20px; display: inline-block;"></i> &nbsp; 5 to 10<br>
+            </div>
         </div>
         <p class="attribution">Data from <a class="attribution" href="https://www.inaturalist.org/" target="_blank">iNaturalist</a></p>
     </div>
+
     <script>
         var map = L.map('map').setView([44.0682, -114.742], 6);
         var baseLayers = {
@@ -157,6 +166,19 @@
                     console.error("Error fetching data:", error);
                 });
         }
+
+        // Show/hide legend based on overlay toggle
+        map.on('overlayadd', function(e) {
+            if (e.name === "Climate Overlay") {
+                document.getElementById("legend").style.display = "block";
+            }
+        });
+
+        map.on('overlayremove', function(e) {
+            if (e.name === "Climate Overlay") {
+                document.getElementById("legend").style.display = "none";
+            }
+        });
     </script>
 </body>
 </html>
